@@ -1,0 +1,3634 @@
+Delivered-To: sathinilokesh123@gmail.com
+Received: by 2002:a05:6638:2909:b0:4b7:c7f0:e780 with SMTP id ed9csp3116649jab;
+        Mon, 17 Jun 2024 02:58:02 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IE0R1GjFiDpe0taWUm71olkgRPvG82x/wMHlXZJ/cDDDv98aaDa5ohZ/554e7m8kFjLZ4or
+X-Received: by 2002:a9d:7348:0:b0:6f9:ab3b:9ee8 with SMTP id 46e09a7af769-6fb93893748mr11076704a34.34.1718618282064;
+        Mon, 17 Jun 2024 02:58:02 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1718618282; cv=none;
+        d=google.com; s=arc-20160816;
+        b=tTOQ1bWpQc37kXDzgXNZL3mrJJfvEM/GVm1iztQkVwwcmUyTe/3WqA2dNMLMwRLGfK
+         A8CxelBKzMOGt2F9ve+aoFsjfIJgsZ2UYazB/1mM2iixQsZJdk/ZH5Hax48a9QrWfmTy
+         RvcXh/pJJytYm0P0qnid9pHnIn7lx+p6skRUm/WKl2dgVdBPfKVW/rQgyWKxagcBmJDc
+         xs7pTxOhK3HkHzkmTP7cfZvl/NByK0124krXHlS6imfB12RL0bS83BqPMv+07+tvnggO
+         2L7RLAiupv4kpCIDAxFUDXiotJBqnQlKdtP971AinB1ACwrr5E6FzdtHdwDYI5s8ynFp
+         iLtQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:mime-version:to:from:subject:date:message-id
+         :dkim-signature:dkim-signature;
+        bh=0QRN6wLfJOHeFCYXv0evseqWTbfHeQ0hEkhqOJkQ/m4=;
+        fh=wjjJ2pzQJbbC3ZWiH6nyTKElv9UmD3Eih4XR8lpn8Cs=;
+        b=Deoyw7og1uFfRg/9fMqFZ46c9UUo2/KDnKH79YSNGK7TMLOfYZkAE27qvukP3sl6Zc
+         GBooWnpr+9fiaWkp39SX/+3kwLrzHRKmw6aodHyIaHk1+LeGL4Yck1US7VaiR5qCd5VR
+         FIhAY2gWFp4MpcsffK87GyrHN+W2XGjUYbYWTxRRwsaW6Mw1S24oCwHhEvedLs92AHV3
+         Aai/6ucuufhPiKZeyQmemzUYV6wJnW4pyqq/jCVVD4WRQooQ95w3Ci/NnFwP5nBaW/Th
+         CRr4qONOndViqSjFUVhF3zErBaNtZpD+TrGHewB9YdVmgGfbS1zxECMzVjAlhj15ZHjI
+         okmQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@dare2compete.com header.s=fsdxu4c7gptsv5nf6abawltzbxalfyl6 header.b=hL9TqDMU;
+       dkim=pass header.i=@amazonses.com header.s=zpkik46mrueu52d3326ufxxchortqmoc header.b=eCeD+r3H;
+       spf=pass (google.com: domain of 0109019025a1ccf0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-000000@emails.dare2compete.com designates 76.223.176.214 as permitted sender) smtp.mailfrom=0109019025a1ccf0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-000000@emails.dare2compete.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=dare2compete.com
+Return-Path: <0109019025a1ccf0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-000000@emails.dare2compete.com>
+Received: from c176-214.smtp-out.ap-south-1.amazonses.com (c176-214.smtp-out.ap-south-1.amazonses.com. [76.223.176.214])
+        by mx.google.com with ESMTPS id 41be03b00d2f7-6fee453bf17si8475573a12.529.2024.06.17.02.58.00
+        for <sathinilokesh123@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 17 Jun 2024 02:58:02 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 0109019025a1ccf0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-000000@emails.dare2compete.com designates 76.223.176.214 as permitted sender) client-ip=76.223.176.214;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@dare2compete.com header.s=fsdxu4c7gptsv5nf6abawltzbxalfyl6 header.b=hL9TqDMU;
+       dkim=pass header.i=@amazonses.com header.s=zpkik46mrueu52d3326ufxxchortqmoc header.b=eCeD+r3H;
+       spf=pass (google.com: domain of 0109019025a1ccf0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-000000@emails.dare2compete.com designates 76.223.176.214 as permitted sender) smtp.mailfrom=0109019025a1ccf0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-000000@emails.dare2compete.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=dare2compete.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=fsdxu4c7gptsv5nf6abawltzbxalfyl6; d=dare2compete.com;
+	t=1718618279;
+	h=Message-ID:Date:Subject:From:To:MIME-Version:Content-Type;
+	bh=Pd3G+M5dcG5w/Ah6BY8TIyoL37nFHrr46XERnnKQvJE=;
+	b=hL9TqDMUvIiYzyxoGEsvyUzQaLfEbEMNDkZ7N78h7WewXaZ3YI5Ah20V0jzz6fE5
+	rZairEZsynDUsYReFpstD1nBULZCH1lJHqS71qWY1as+juTZnfRzpu3mAmIbfqyTWEG
+	/tgX2DJvfejI+ZjMN2d1wRvhE0BDtBK4AlyEeVvbByeKRSS2SgOZPl4V7+KwenpYO3K
+	Qs1VcnANwVlmbiajLjJ7sA7xTdsdSfDTa6KH0BCQLZojKVadoKNEmPykBZncE7d4BnJ
+	IyuHPuR9/g2dEnxrPKFf5nx9hIoIOWd6xDTjSj5gicSuqO7jjnUCdB+79xKu1Tts1Lh
+	3VT+CiJkjg==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=zpkik46mrueu52d3326ufxxchortqmoc; d=amazonses.com; t=1718618279;
+	h=Message-ID:Date:Subject:From:To:MIME-Version:Content-Type:Feedback-ID;
+	bh=Pd3G+M5dcG5w/Ah6BY8TIyoL37nFHrr46XERnnKQvJE=;
+	b=eCeD+r3HlhAn/TSUW8R3qSuD1HiEm0FnYRMD++AlTkS9uOtamjyxuQ8LQHZGajy2
+	Zov3qSKAWc/UPtFvNThvYXFsSDoWVvUL9EM3NGdUUxbBXWG7MFxr8tmI//fj2mR374j
+	sx14NG9RRUrF3B94hPctZiNU/A4BPxeij9aJhJik=
+Message-ID: <0109019025a1ccf0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-000000@ap-south-1.amazonses.com>
+Date: Mon, 17 Jun 2024 09:57:59 +0000
+Subject: Congratulations! Your application for Cyber Security Internship is
+ complete!
+From: Unstop <noreply@dare2compete.com>
+To: sathinilokesh123@gmail.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_1718618279_788a1501a6d9136554f052ccf199a028_=_"
+Feedback-ID: ::1.ap-south-1.vLaUspdbZtz+0zahNQSbWc0bbDg5bpfORXW9fnjVqUQ=:AmazonSES
+X-SES-Outgoing: 2024.06.17-76.223.176.214
+
+--_=_swift_1718618279_788a1501a6d9136554f052ccf199a028_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html lang=3D"en">
+
+<head>
+    <meta http-equiv=3D"=
+Content-Type" content=3D"text/html; charset=3Dutf-8" />
+    <meta http-eq=
+uiv=3D"X-UA-Compatible" content=3D"IE=3Dedge" />
+    <title>Registration =
+successful</title>
+    <meta name=3D"author" content=3D"" content=3D"" />=
+
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sca=
+le=3D1.0" />
+    <meta name=3D"x-apple-disable-message-reformatting">
+ =
+   <style type=3D"text/css">
+        @import  url("https://fonts.googleap=
+is.com/css?family=3DRoboto:400,500,700&display=3Dswap");
+
+        body =
+{
+            width: auto;
+            background-color: #E5F1FC;
+   =
+         margin: 0 auto;
+            padding: 0;
+            font-size:=
+ 14px;
+            -webkit-text-size-adjust: 100% !important;
+         =
+   -ms-text-size-adjust: 100% !important;
+            -webkit-font-smooth=
+ing: antialiased;
+            font-family: "Roboto", sans-serif;
+      =
+  }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5=
+,
+        h6,
+        p,
+        span,
+        a,
+        strong,=
+
+        div,
+        td {
+            font-family: "Roboto", sans-se=
+rif;
+        }
+
+        img {
+            border: 0 !important;
+ =
+           outline: none !important;
+            display: block;
+      =
+  }
+
+        a {
+            text-decoration: none;
+            col=
+or: #0073e6;
+        }
+
+        .h_text_color:hover {
+            c=
+olor: #0073e6 !important;
+            text-decoration: underline !importa=
+nt;
+        }
+
+        .footer_sect a:hover {
+            opacity: =
+.8;
+        }
+
+        table {
+            border-collapse: collaps=
+e;
+            mso-table-lspace: 0px;
+            mso-table-rspace: 0px=
+;
+        }
+
+        .img_box {
+            display: flex !importan=
+t;
+            align-items: center;
+            justify-content: center=
+;
+            background: #fff;
+        }
+        .invalid {
+      =
+      background-color: #fff7e0 !important;
+            border-color: #ff=
+ba00 !important;
+        }
+        .valid {
+            background-co=
+lor: #d7f9eb !important;
+            border-color: #01a768 !important;
+=
+        }
+
+        @media (max-width: 600px) {
+            body,
+  =
+          .bg_color {
+                background-color: #fff !important;=
+
+            }
+            .full {
+                width: 100% !impor=
+tant;
+            }
+
+            .pdng {
+                padding: 2=
+0px 15px !important;
+            }
+            .m_pdng {
+            =
+    padding: 20px 0 !important;
+            }
+
+            .hedr_higt=
+ {
+                min-height: 210px !important;
+            }
+      =
+      .hedr_bg {
+                background-size: 150px !important;
+   =
+         }
+            .hedr {
+                padding: 15px !important=
+;
+                background-size: 150px !important;
+            }
+  =
+          .hedr .h1 {
+                font-size: 20px !important;
+     =
+           line-height: 24px !important;
+            }
+            .hed=
+r .p {
+                padding-top: 5px !important;
+                fon=
+t-size: 14px !important;
+                line-height: 19px !important;
+=
+            }
+            .title h2 {
+                font-size: 20px !=
+important;
+                line-height: 24px !important;
+            }=
+
+            .title p {
+                margin-top: 5px !important;
+ =
+               font-size: 14px !important;
+                line-height: 1=
+9px !important;
+            }
+            .title img {
+              =
+  width: 130px !important;
+            }
+
+            .share_sect {=
+
+                display: block;
+            }
+            .left_shar=
+e {
+                width: 100%;
+                display: block;
+    =
+            padding-right: 0 !important;
+            }
+            .rig=
+ht_share {
+                width: 100%;
+                display: block;=
+
+                margin-top: 15px;
+                border-top: 1px dash=
+ed #ffdd66;
+                padding-top: 15px;
+                text-ali=
+gn: left !important;
+            }
+            .right_share img {
+   =
+             width: 40px !important;
+            }
+            .right_s=
+hare img.copy {
+                width: 94px !important;
+            }=
+
+
+            .op_list {
+                width: 50%;
+            }=
+
+            .op_list + .op_list + .op_list {
+                display: =
+none;
+            }
+
+            .footer_sect {
+                dis=
+play: block;
+            }
+            .footer_sect .un {
+           =
+     border-right: 0 !important;
+                padding-right: 0 !import=
+ant;
+                display: block;
+                margin-bottom: 15p=
+x;
+                text-align: center;
+            }
+            .foo=
+ter_sect .un div {
+                text-align: center !important;
+     =
+       }
+            .footer_sect .un img {
+                width: 80px=
+ !important;
+            }
+
+            .footer_sect .follow {
+    =
+            border-right: 0 !important;
+                padding-right: 0 =
+!important;
+                text-align: center;
+                width: =
+100%;
+                display: block;
+                margin-bottom: 15=
+px;
+                padding-left: 0 !important;
+            }
+
+    =
+        .footer_sect p {
+                font-size: 12px !important;
+  =
+              margin-bottom: 10px !important;
+                text-align:=
+ center !important;
+            }
+            .footer_sect .follow div =
+{
+                text-align: center !important;
+            }
+
+   =
+         .footer_sect img {
+                width: 40px !important;
+   =
+         }
+            .footer_store {
+                width: 100%;
+ =
+               text-align: center;
+                display: block;
+    =
+        }
+
+            .footer_store .coin {
+                padding-=
+left: 0 !important;
+            }
+            .footer_store div {
+   =
+             text-align: center !important;
+            }
+            .=
+queries {
+                font-size: 13px !important;
+            }
+ =
+           .queries {
+                padding: 20px 15px 15px !important;=
+
+            }
+            .queries tr {
+                display: blo=
+ck;
+            }
+            .queries td {
+                display: =
+block;
+                text-align: center !important;
+            }
+ =
+           .queries td + td {
+                margin-top: 5px;
+        =
+    }
+            .m_none {
+                display: none !important;=
+
+            }
+
+            .user_box {
+                width: 100%=
+ !important;
+            }
+            .user_dtls {
+                w=
+idth: auto !important;
+            }
+        }
+    </style>
+</head>=
+
+
+<body>
+    <div style=3D"background-color: #E5F1FC; width: 100%; ma=
+rgin: 0; padding: 0;">
+        <style>
+=09@media (max-width: 600px) {=
+
+=09=09.hedr_higt {
+=09=09=09background: #1c4980 !important;
+=09=09}=
+
+
+=09=09.hedr_bg {
+=09=09=09padding: 30px 15px !important;
+=09=09}=
+
+
+=09=09.hedr_bg .logo {
+=09=09=09height: 70px !important;
+=09=09}=
+
+
+=09=09.hedr_bg .h1 {
+=09=09=09font-size: 20px !important;
+=09=09=
+=09line-height: 24px !important;
+=09=09=09width: auto !important;
+=09=
+=09=09max-width: calc(100% - 80px);
+=09=09}
+
+=09=09.h1 br {
+=09=09=
+=09display: none;
+=09=09}
+=09}
+</style>
+
+<table cellpadding=3D"0"=
+ cellspacing=3D"0" align=3D"center" border=3D"0" width=3D"700" class=3D"ful=
+l hedr_higt br0" style=3D"
+                  background: #FFC700;
+     =
+             background-image: url(https://d8it4huxumps7.cloudfront.net/upl=
+oads/images/65e966d453260_mail_hdr_bg.png?d=3D512x340);
+                 =
+ background-size: 256px;
+                  background-position: bottom ri=
+ght;
+                  border-radius: 16px;
+                  backgroun=
+d-repeat: no-repeat;
+              ">
+=09<tbody>
+=09=09<tr>
+=09=09=
+=09<td class=3D"hedr_bg" style=3D"padding: 50px 30px;">
+=09=09=09=09<a hr=
+ef=3D"https://unstop.com/competitions/1021524/register/edit" target=3D"_bla=
+nk" style=3D"display: block; color:inherit; text-decoration: none;">
+=09=
+=09=09=09=09<table style=3D"width: 100%;">
+=09=09=09=09=09=09<tr>
+=09=
+=09=09=09=09=09=09<td class=3D"logo" width=3D"70" style=3D"
+             =
+                                 width: 70px;
+=09=09=09=09=09=09=09=09=09=
+=09=09  min-width:70px;
+                                              hei=
+ght: 70px;
+                                              background: #fff=
+;
+                                              border-radius: 12px;
+  =
+                                            background-image: url(https://d=
+8it4huxumps7.cloudfront.net/uploads/images/un-emails/white-bg.png);
+     =
+                                         background-size: cover;
+        =
+                                      vertical-align: middle;
+           =
+                                   box-sizing: border-box;
+              =
+                            ">
+=09=09=09=09=09=09=09=09<img src=3D"https:=
+//d8it4huxumps7.cloudfront.net/uploads/images/75x75/665e115669bd6_organisat=
+ion_image-mlDnIm5UpH965694041adi3foNvdQ.png" alt=3D"Cyber Security Internsh=
+ip" style=3D"
+                                                  box-sizin=
+g: border-box;
+                                                  border: =
+0!important;
+                                                  outline: n=
+one!important;
+                                                  display:=
+ block;
+                                                  max-height: 80%=
+;
+                                                  max-width: 80%;
+   =
+                                               margin: auto;
+            =
+                                  " width=3D"55">
+=09=09=09=09=09=09=09</=
+td>
+=09=09=09=09=09=09=09<td class=3D"h1" style=3D"
+                   =
+                           font-family: 'Inter', sans-serif;
+            =
+                                  color: #1c4980;
+                       =
+                       font-size: 30px;
+                                 =
+             line-height: 34px;
+                                         =
+     font-weight: 500;
+                                              widt=
+h: 560px;
+                                              padding-left: 15p=
+x;
+                                              box-sizing: border-box;=
+
+                                              vertical-align: middle;
+=
+                                          ">
+=09=09=09=09=09=09=09=09Cybe=
+r Security Internship
+=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09</tr=
+>
+=09=09=09=09=09</table>
+=09=09=09=09</a>
+=09=09=09</td>
+=09=09</t=
+r>
+=09</tbody>
+</table>=09=09<table cellpadding=3D"0" cellspacing=3D"0"=
+ align=3D"center" border=3D"0" width=3D"700" class=3D"full">
+            =
+<tr>
+                <td class=3D"higt0" style=3D"height: 20px;"></td>
+=
+            </tr>
+        </table>
+        <table
+            cellpad=
+ding=3D"0" cellspacing=3D"0" align=3D"center" bgcolor=3D"#E5F1FC" border=3D=
+"0"
+            width=3D"100%"
+            style=3D"background-color: #=
+E5F1FC; width: 100%;"
+            class=3D"bg_color"
+        >
+      =
+      <tr>
+                <td>
+                    <table cellpadding=
+=3D"0" cellspacing=3D"0" align=3D"center" bgcolor=3D"#ffffff" border=3D"0" =
+width=3D"700" class=3D"full">
+                        <tbody>
+         =
+                   <tr>
+                                <td class=3D"pdng=
+" style=3D"padding: 30px 50px; text-align: center;">
+                    =
+                                                        <!-- Registration D=
+etails -->
+                                        <div style=3D"text-ali=
+gn: left;">
+                                            <div style=3D"mar=
+gin:10px 0">Hi Lokesh Sathini,</div>
+                                    =
+        <div>Congratulations, you star!</div>
+                           =
+                 <div style=3D"margin-bottom:10px;">You just made your firs=
+t move on the playground of opportunity by applying for an internship! =
+=F0=9F=94=A5</div>
+                                            <div>All t=
+he best for the next steps in the process for <span style=3D"font-weight:60=
+0">Cyber Security Internship at Prasunet Company</span>. </div>
+         =
+                                   <div style=3D"margin:10px 0">We hope you=
+ ace this opportunity! </div>
+                                           =
+ <div style=3D"margin:10px 0">While you wait for an update on the hiring pr=
+ocess, explore <strong>Unstop</strong> to <strong>upskill</strong> and <str=
+ong>find new opportunities</strong> to hit a six on every career move you m=
+ake.   </div>
+                                            <div>Regards, <=
+/div>
+                                            <div>Team Unstop </div>=
+                                               =20
+                        =
+                </div>
+                                       =20
+       =
+                                                             </td>
+      =
+                      </tr>
+                        </tbody>
+          =
+          </table>
+
+                   =20
+                            =
+                                            <table cellpadding=3D"0" cellsp=
+acing=3D"0" align=3D"center" bgcolor=3D"#FFBA00" border=3D"0" width=3D"700"=
+ class=3D"full">
+                                <tbody>
+              =
+                      <tr>
+                                        <td
+=
+                                            class=3D"pdng"
+              =
+                              style=3D"
+                                 =
+               padding: 20px 40px;
+                                      =
+          background-image: url(https://d8it4huxumps7.cloudfront.net/upload=
+s/images/un-emails/border-bg.png?d=3D1400x160);
+                         =
+                       background-size: cover;
+                          =
+                      background-repeat: no-repeat;
+                     =
+                           background-position: center;
+                 =
+                           "
+                                        >
+=
+                                            <table cellpadding=3D"0" cellsp=
+acing=3D"0" align=3D"center" border=3D"0" style=3D"width: 100%;">
+       =
+                                         <tbody>
+                        =
+                            <tr class=3D"share_sect">
+                   =
+                                     <td
+                                =
+                            class=3D"left_share"
+                        =
+                                    style=3D"padding-right: 15px;"
+      =
+                                                  >
+                     =
+                                       <table cellpadding=3D"0" cellspacing=
+=3D"0" align=3D"center" border=3D"0" style=3D"width: 100%;">
+            =
+                                                    <tr>
+                =
+                                                    <td width=3D"50">
+   =
+                                                                     <img=
+
+                                                                        =
+    src=3D"https://d8it4huxumps7.cloudfront.net/uploads/images/un-emails/ic=
+ons/refer-and-earn-icon.png?d=3D100x80"
+                                 =
+                                           alt=3D"Share Icon"
+           =
+                                                                 style=3D"w=
+idth: 50px;"
+                                                            =
+                width=3D"50"
+                                            =
+                            >
+                                           =
+                         </td>
+                                          =
+                          <td style=3D"font-family: 'Roboto', sans-serif; t=
+ext-align: left; font-size: 14px; line-height: 120%; color: #1A1D21; font-w=
+eight: 700;">
+                                                           =
+             Refer & Earn!
+                                              =
+                          <span style=3D"display: block; font-size: 12px; l=
+ine-height: 100%; margin-top: 2px;">
+                                    =
+                                        Win Macbook Air M1, iPhone 14 & mor=
+e!
+                                                                      =
+  </span>
+                                                               =
+     </td>
+                                                              =
+  </tr>
+                                                            </tab=
+le>
+                                                        </td>
+
+  =
+                                                      <td class=3D"right_sh=
+are" style=3D"text-align: right;">
+                                      =
+                      <a
+                                                =
+                href=3D"https://api.whatsapp.com/send?text=3DCyber Security=
+ Internship - https://unstop.com/competitions/1021524?lb=3DIvXi9D6"
+     =
+                                                           style=3D"display=
+: inline-block; text-decoration: none;"
+                                 =
+                               target=3D"_blank"
+                        =
+                                    >
+                                   =
+                             <img
+                                       =
+                             src=3D"https://d8it4huxumps7.cloudfront.net/up=
+loads/images/un-emails/icons/whatsapp-icon.png?d=3D100x80"
+              =
+                                                      alt=3D"Whatsapp Icon"=
+
+                                                                    styl=
+e=3D"width: 45px;"
+                                                      =
+              width=3D"45"
+                                              =
+                  >
+                                                     =
+       </a>
+
+                                                          =
+  <a
+                                                                href=
+=3D"http://linkedin.com/shareArticle?mini=3Dtrue&url=3Dhttps://unstop.com/c=
+ompetitions/1021524?lb=3DIvXi9D6&shareTitle=3DCyber Security Internship"
+=
+                                                                style=3D"di=
+splay: inline-block; text-decoration: none;"
+                            =
+                                    target=3D"_blank"
+                   =
+                                         >
+                              =
+                                  <img
+                                  =
+                                  src=3D"https://d8it4huxumps7.cloudfront.n=
+et/uploads/images/un-emails/icons/linkedin-icon.png?d=3D100x80"
+         =
+                                                           alt=3D"Linkedin =
+Iocn"
+                                                                   =
+ style=3D"width: 45px;"
+                                                 =
+                   width=3D"45"
+                                         =
+                       >
+                                                =
+            </a>
+
+                                                     =
+       <a
+                                                               =
+ href=3D"http://twitter.com/intent/tweet?text=3DCyber Security Internship @=
+ &url=3Dhttps://unstop.com/competitions/1021524?lb=3DIvXi9D6"
+           =
+                                                     style=3D"display: inli=
+ne-block; text-decoration: none;"
+                                       =
+                         target=3D"_blank"
+                              =
+                              >
+                                         =
+                       <img
+                                             =
+                       src=3D"https://d8it4huxumps7.cloudfront.net/uploads/=
+images/un-emails/icons/twitter-icon.png?d=3D100x80"
+                     =
+                                               alt=3D"Twitter Icon"
+     =
+                                                               style=3D"wid=
+th: 45px;"
+                                                              =
+      width=3D"45"
+                                                      =
+          >
+                                                            <=
+/a>
+
+                                                            <a
+ =
+                                                               href=3D"http=
+s://www.facebook.com/sharer/sharer.php?app_id=3D136377486571908&sdk=3Djoey&=
+u=3Dhttps://unstop.com/competitions/1021524?lb=3DIvXi9D6"
+               =
+                                                 style=3D"display: inline-b=
+lock; text-decoration: none;"
+                                           =
+                     target=3D"_blank"
+                                  =
+                          >
+                                             =
+                   <img
+                                                 =
+                   src=3D"https://d8it4huxumps7.cloudfront.net/uploads/imag=
+es/un-emails/icons/facebook-icon.png?d=3D100x80"
+                        =
+                                            alt=3D"Facebook Icon"
+       =
+                                                             style=3D"width=
+: 45px;"
+                                                                =
+    width=3D"45"
+                                                        =
+        >
+                                                            </a=
+>
+
+                                                            <a
+   =
+                                                             href=3D"https:=
+//unstop.com/competitions/1021524?lb=3DIvXi9D6"
+                         =
+                                       style=3D"display: inline-block; text=
+-decoration: none;"
+                                                     =
+           target=3D"_blank"
+                                            =
+                >
+                                                       =
+         <img
+                                                           =
+         src=3D"https://d8it4huxumps7.cloudfront.net/uploads/images/un-emai=
+ls/copylink-icon.png?d=3D235x80"
+                                        =
+                            alt=3D"Copylink Icon"
+                       =
+                                             style=3D"width: 110px;"
+    =
+                                                                width=3D"11=
+0"
+                                                                    cl=
+ass=3D"copy"
+                                                            =
+    >
+                                                            </a>
+=
+                                                        </td>
+           =
+                                         </tr>
+                          =
+                      </tbody>
+                                          =
+  </table>
+                                        </td>
+              =
+                      </tr>
+                                </tbody>
+  =
+                          </table>
+                                      =
+                         =20
+                    <table cellpadding=3D"0" c=
+ellspacing=3D"0" align=3D"center" bgcolor=3D"#FFF3D1" border=3D"0" width=3D=
+"700" class=3D"full">
+                        <tbody>
+                 =
+           <tr>
+                                <td class=3D"pdng" style=
+=3D"padding: 20px 50px 20px;">
+                                    <h3 st=
+yle=3D"font-family: 'Roboto', sans-serif; color: #1A1D21; font-size: 20px; =
+font-weight: 600; line-height: 100%; margin: 0 0 16px;">
+                =
+                        Important Notes:
+                                =
+    </h3>
+
+                                    <ul style=3D"margin: 0; =
+padding: 0; padding-left: 15px;">
+                                       =
+ <li style=3D"font-family: 'Roboto', sans-serif; font-size: 14px; line-heig=
+ht: 19px; margin-bottom: 10px; text-align: left; font-weight: 400; color: #=
+1A1D21;">
+                                            You can Modify your=
+ Application till
+                                            <strong> 4 =
+Jul'24, 12:00 AM IST </strong>=20
+                                         =
+   by clicking on the pencil(=E2=9C=8E) icon in the Application Details pag=
+e.
+                                        </li>
+                      =
+                                                              <li style=3D"=
+font-family: 'Roboto', sans-serif; font-size: 14px; line-height: 19px; marg=
+in-bottom: 10px; text-align: left; font-weight: 400; color: #1A1D21;">
+  =
+                                              To Cancel your Application, c=
+lick the <strong>Cancel Application</strong> button in the Application Deta=
+ils page.
+                                            </li>
+           =
+                                                                 </ul>
+  =
+                              </td>
+                            </tr>
+ =
+                       </tbody>
+                    </table>
+
+       =
+            =20
+                   =20
+
+                   =20
+          =
+         =20
+
+                                            <table cellpadd=
+ing=3D"0" cellspacing=3D"0" align=3D"center" bgcolor=3D"#E5F1FC" border=3D"=
+0" width=3D"700" class=3D"full m_none">
+                            <tbod=
+y>
+                                <tr>
+                               =
+     <td style=3D"height: 10px;">
+                                       =
+ =C2=A0
+                                    </td>
+                     =
+           </tr>
+                            </tbody>
+                 =
+       </table>
+
+                        <table cellpadding=3D"0" cells=
+pacing=3D"0" align=3D"center" bgcolor=3D"#ffffff" border=3D"0" width=3D"700=
+" class=3D"full">
+                            <tbody>
+                 =
+               <tr>
+                                    <td class=3D"m_pd=
+ng" style=3D"padding: 30px 23px;">
+                                      =
+  <table cellpadding=3D"0" cellspacing=3D"0" align=3D"center" border=3D"0" =
+style=3D"width: 100%;">
+                                            <tr>=
+
+                                                <td style=3D"font-family=
+: 'Roboto', sans-serif; color: #1A1D21; font-size: 20px; font-weight: 600; =
+line-height: 100%; padding: 0 7px 16px;">
+                               =
+                     Explore more with Unstop
+                           =
+                     </td>
+                                            </=
+tr>
+                                        </table>
+                  =
+                      <table cellpadding=3D"0" cellspacing=3D"0" align=3D"c=
+enter" border=3D"0" style=3D"width: 100%;">
+                             =
+               <tbody>
+                                                =
+
+                                                                        =
+                            <tr>
+                                        =
+                <td style=3D"padding-bottom: 30px;">
+                    =
+                                        <table width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0">
+                                  =
+                              <tr>
+                                      =
+                              <td style=3D"font-family: 'Roboto', sans-seri=
+f; color: #1A1D21; font-size: 16px; font-weight: 500; padding: 0 7px 10px;"=
+>
+                                                                       =
+ Opportunities
+                                                          =
+          </td>
+                                                         =
+           <td style=3D"font-family: 'Roboto', sans-serif; color: #0073E6; =
+font-size: 14px; font-weight: 500; padding: 0 7px 10px; text-align: right;"=
+>
+                                                                       =
+ <a href=3D"https://unstop.com/competitions" style=3D"display: inline-block=
+; color: #0073E6;">
+                                                     =
+                       View More
+                                        =
+                                </a>
+                                    =
+                                </td>
+                                   =
+                             </tr>
+                                      =
+                      </table>
+                                          =
+                  <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"=
+ border=3D"0">
+                                                          =
+      <tbody>
+                                                           =
+         <tr class=3D"op_box">
+                                          =
+                                                                           =
+                                                                           =
+                            <td class=3D"op_list" style=3D"padding: 0 7px; =
+width: 33%; box-sizing: border-box; vertical-align: top;">
+              =
+                                                                  <a
+    =
+                                                                           =
+     href=3D"https://unstop.com/internships/sales-internship-unstop-745281"=
+
+                                                                        =
+            class=3D"img_box"
+                                           =
+                                         style=3D"border-radius: 8px; displ=
+ay: block; overflow: hidden;"
+                                           =
+                                     >
+                                  =
+                                                                           =
+                                                               <img
+     =
+                                                                           =
+            src=3D"https://d8it4huxumps7.cloudfront.net/lambda-pdfs/opportu=
+nity-bannerImages/1718007084.png?d=3D700x400"
+                           =
+                                                                 style=3D"w=
+idth: 100%; display: block; margin: auto;"
+                              =
+                                                              width=3D"204"=
+
+                                                                        =
+                >
+                                                       =
+                                                                           =
+                                      </a>
+
+                           =
+                                                     <table>
+            =
+                                                                        <tr=
+>
+                                                                       =
+                 <td style=3D"font-size: 13px; line-height: 16px; color: #4=
+34343; padding-top: 12px; font-weight: 500;">
+                           =
+                                                                 <a
+     =
+                                                                           =
+                class=3D"h_text_color"
+                                  =
+                                                              href=3D"https=
+://unstop.com/internships/sales-internship-unstop-745281"
+               =
+                                                                           =
+      style=3D"font-family: 'Roboto', sans-serif; text-decoration: none; co=
+lor: #434343;"
+                                                          =
+                                  >
+                                     =
+                                                           Unstop Pro Inter=
+nship
+                                                                   =
+                         </a>
+                                           =
+                                             </td>
+                      =
+                                                              </tr>
+     =
+                                                                           =
+    <tr>
+                                                                =
+                        <td style=3D"display: block; color: #5a5a5a; font-s=
+ize: 12px; line-height: 16px; padding-top: 5px; font-weight: 500;">
+     =
+                                                                           =
+            <a
+                                                          =
+                                      class=3D"h_text_color"
+            =
+                                                                           =
+         href=3D"https://unstop.com/internships/sales-internship-unstop-745=
+281"
+                                                                    =
+                            style=3D"font-family: 'Roboto', sans-serif; tex=
+t-decoration: none; color: #5a5a5a;"
+                                    =
+                                                        >
+               =
+                                                                           =
+      Unstop
+                                                            =
+                                </a>
+                                    =
+                                                    </td>
+               =
+                                                                     </tr>=
+
+                                                                        =
+        </table>
+                                                        =
+                    </td>
+                                               =
+                                                                           =
+                          <td class=3D"op_list" style=3D"padding: 0 7px; wi=
+dth: 33%; box-sizing: border-box; vertical-align: top;">
+                =
+                                                                <a
+      =
+                                                                           =
+   href=3D"https://unstop.com/jobs/associate-web-operations-hybrid-mode-uns=
+top-871432"
+                                                             =
+                       class=3D"img_box"
+                                =
+                                                    style=3D"border-radius:=
+ 8px; display: block; overflow: hidden;"
+                                =
+                                                >
+                       =
+                                                                           =
+                                                                          <=
+img
+                                                                     =
+                       src=3D"https://d8it4huxumps7.cloudfront.net/lambda-p=
+dfs/opportunity-bannerImages/1714450601.png?d=3D700x400"
+                =
+                                                                           =
+ style=3D"width: 100%; display: block; margin: auto;"
+                   =
+                                                                         wi=
+dth=3D"204"
+                                                             =
+                           >
+                                            =
+                                                                           =
+                                                 </a>
+
+                =
+                                                                <table>
+ =
+                                                                           =
+        <tr>
+                                                            =
+                            <td style=3D"font-size: 13px; line-height: 16px=
+; color: #434343; padding-top: 12px; font-weight: 500;">
+                =
+                                                                           =
+ <a
+                                                                     =
+                           class=3D"h_text_color"
+                       =
+                                                                         hr=
+ef=3D"https://unstop.com/jobs/associate-web-operations-hybrid-mode-unstop-8=
+71432"
+                                                                  =
+                              style=3D"font-family: 'Roboto', sans-serif; t=
+ext-decoration: none; color: #434343;"
+                                  =
+                                                          >
+             =
+                                                                           =
+        Associate Web Operations (Hybrid Mode)
+                          =
+                                                                  </a>
+  =
+                                                                           =
+           </td>
+                                                        =
+                            </tr>
+                                       =
+                                             <tr>
+                       =
+                                                                 <td style=
+=3D"display: block; color: #5a5a5a; font-size: 12px; line-height: 16px; pad=
+ding-top: 5px; font-weight: 500;">
+                                      =
+                                                      <a
+                =
+                                                                           =
+     class=3D"h_text_color"
+                                             =
+                                                   href=3D"https://unstop.c=
+om/jobs/associate-web-operations-hybrid-mode-unstop-871432"
+             =
+                                                                           =
+        style=3D"font-family: 'Roboto', sans-serif; text-decoration: none; =
+color: #5a5a5a;"
+                                                        =
+                                    >
+                                   =
+                                                             Unstop
+     =
+                                                                           =
+            </a>
+                                                        =
+                                </td>
+                                   =
+                                                 </tr>
+                  =
+                                                              </table>
+  =
+                                                                          <=
+/td>
+                                                                    =
+                                                                           =
+     <td class=3D"op_list" style=3D"padding: 0 7px; width: 33%; box-sizing:=
+ border-box; vertical-align: top;">
+                                     =
+                                           <a
+                           =
+                                                         href=3D"https://un=
+stop.com/internships/sales-ops-internship-consultbae-india-private-limited-=
+871988"
+                                                                 =
+                   class=3D"img_box"
+                                    =
+                                                style=3D"border-radius: 8px=
+; display: block; overflow: hidden;"
+                                    =
+                                            >
+                           =
+                                                                           =
+                                                                      <img=
+
+                                                                        =
+                    src=3D"https://d8it4huxumps7.cloudfront.net/lambda-pdfs=
+/opportunity-bannerImages/1707374211.png?d=3D700x400"
+                   =
+                                                                         st=
+yle=3D"width: 100%; display: block; margin: auto;"
+                      =
+                                                                      width=
+=3D"204"
+                                                                =
+                        >
+                                               =
+                                                                           =
+                                              </a>
+
+                   =
+                                                             <table>
+    =
+                                                                           =
+     <tr>
+                                                               =
+                         <td style=3D"font-size: 13px; line-height: 16px; c=
+olor: #434343; padding-top: 12px; font-weight: 500;">
+                   =
+                                                                         <a=
+
+                                                                        =
+                        class=3D"h_text_color"
+                          =
+                                                                      href=
+=3D"https://unstop.com/internships/sales-ops-internship-consultbae-india-pr=
+ivate-limited-871988"
+                                                   =
+                                             style=3D"font-family: 'Roboto'=
+, sans-serif; text-decoration: none; color: #434343;"
+                   =
+                                                                         >=
+
+                                                                        =
+                        Sales Ops Internship
+                            =
+                                                                </a>
+    =
+                                                                           =
+         </td>
+                                                          =
+                          </tr>
+                                         =
+                                           <tr>
+                         =
+                                                               <td style=3D=
+"display: block; color: #5a5a5a; font-size: 12px; line-height: 16px; paddin=
+g-top: 5px; font-weight: 500;">
+                                         =
+                                                   <a
+                   =
+                                                                           =
+  class=3D"h_text_color"
+                                                =
+                                                href=3D"https://unstop.com/=
+internships/sales-ops-internship-consultbae-india-private-limited-871988"=
+
+                                                                        =
+                        style=3D"font-family: 'Roboto', sans-serif; text-de=
+coration: none; color: #5a5a5a;"
+                                        =
+                                                    >
+                   =
+                                                                           =
+  ConsultBae India Private...
+                                           =
+                                                 </a>
+                   =
+                                                                     </td>=
+
+                                                                        =
+            </tr>
+                                                       =
+                         </table>
+                                       =
+                                     </td>
+                              =
+                                                                           =
+                                   </tr>
+                                =
+                                </tbody>
+                                =
+                            </table>
+                                    =
+                    </td>
+                                               =
+     </tr>
+                                               =20
+           =
+                                    =20
+                                   =
+            =20
+
+                                               =20
+     =
+                                           <tr>
+                         =
+                           <td style=3D"padding-bottom: 30px;">
+         =
+                                               <table width=3D"100%" cellpa=
+dding=3D"0" cellspacing=3D"0" border=3D"0">
+                             =
+                               <tr>
+                                     =
+                           <td colspan=3D"2" style=3D"font-family: 'Roboto'=
+, sans-serif; color: #1A1D21; font-size: 16px; font-weight: 500; padding: 0=
+ 7px 10px;">
+                                                            =
+        Articles
+                                                        =
+        </td>
+                                                           =
+     <td style=3D"font-family: 'Roboto', sans-serif; color: #0073E6; font-s=
+ize: 14px; font-weight: 500; padding: 0 7px 10px; text-align: right;">
+  =
+                                                                  <a href=
+=3D"https://unstop.com/articles" style=3D"display: inline-block; color: #00=
+73E6;">
+                                                                 =
+       View More
+                                                        =
+            </a>
+                                                        =
+        </td>
+                                                           =
+ </tr>
+                                                        </table>=
+
+                                                        <table width=3D"=
+100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                 =
+                                           <tbody>
+                      =
+                                          <tr class=3D"op_box">
+         =
+                                                                           =
+                                                        <td class=3D"op_lis=
+t" style=3D"padding: 0 7px; width: 33%; box-sizing: border-box; vertical-al=
+ign: top;">
+                                                             =
+               <a
+                                                       =
+                         href=3D"https://unstop.com/blog/role-of-soft-skill=
+s-in-modern-hiring"
+                                                     =
+                           class=3D"img_box"
+                            =
+                                                    style=3D"border-radius:=
+ 8px; display: block; overflow: hidden;"
+                                =
+                                            >
+                           =
+                                                     <img
+               =
+                                                                     src=3D=
+"https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/10/6529=
+103d80aa7_soft_skills_in_hiring.jpg?d=3D800x533"
+                        =
+                                                            style=3D"width:=
+ 100%; display: block; margin: auto;"
+                                   =
+                                                 width=3D"204"
+          =
+                                                                      >
+ =
+                                                                           =
+</a>
+
+                                                                 =
+           <table>
+                                                      =
+                          <tr>
+                                          =
+                                          <td style=3D"font-size: 13px; lin=
+e-height: 16px; color: #434343; padding-top: 12px; font-weight: 500;">
+  =
+                                                                           =
+           <a
+                                                           =
+                                 class=3D"h_text_color"
+                 =
+                                                                           =
+href=3D"https://unstop.com/blog/role-of-soft-skills-in-modern-hiring"
+   =
+                                                                           =
+              style=3D"font-family: 'Roboto', sans-serif; text-decoration: =
+none; color: #434343;"
+                                                  =
+                                      >
+                                 =
+                                                           Role Of Soft Ski=
+lls In Modern Hiring Can't Be Ignored. Here's Why
+                       =
+                                                                 </a>
+   =
+                                                                           =
+      </td>
+                                                             =
+                   </tr>
+                                                =
+                            </table>
+                                    =
+                                    </td>
+                               =
+                                                                           =
+                                  <td class=3D"op_list" style=3D"padding: 0=
+ 7px; width: 33%; box-sizing: border-box; vertical-align: top;">
+        =
+                                                                    <a
+  =
+                                                                           =
+   href=3D"https://unstop.com/blog/s-somanath-on-why-iitians-turn-away-job-=
+offers-from-isro"
+                                                       =
+                         class=3D"img_box"
+                              =
+                                                  style=3D"border-radius: 8=
+px; display: block; overflow: hidden;"
+                                  =
+                                          >
+                             =
+                                                   <img
+                 =
+                                                                   src=3D"h=
+ttps://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/10/6527f8=
+0b10a0a_isro_iit_.png?d=3D800x533"
+                                      =
+                                              style=3D"width: 100%; display=
+: block; margin: auto;"
+                                                 =
+                                   width=3D"204"
+                        =
+                                                        >
+               =
+                                                             </a>
+
+    =
+                                                                        <ta=
+ble>
+                                                                    =
+            <tr>
+                                                        =
+                            <td style=3D"font-size: 13px; line-height: 16px=
+; color: #434343; padding-top: 12px; font-weight: 500;">
+                =
+                                                                        <a=
+
+                                                                        =
+                    class=3D"h_text_color"
+                              =
+                                                              href=3D"https=
+://unstop.com/blog/s-somanath-on-why-iitians-turn-away-job-offers-from-isro=
+"
+                                                                       =
+                     style=3D"font-family: 'Roboto', sans-serif; text-decor=
+ation: none; color: #434343;"
+                                           =
+                                             >
+                          =
+                                                                  Pay Versu=
+s Passion Conundrum: Why Do IITians Turn Away Job Offers From ISRO?
+     =
+                                                                           =
+        </a>
+                                                            =
+                        </td>
+                                           =
+                                     </tr>
+                              =
+                                              </table>
+                  =
+                                                      </td>
+             =
+                                                                           =
+                                                    <td class=3D"op_list" s=
+tyle=3D"padding: 0 7px; width: 33%; box-sizing: border-box; vertical-align:=
+ top;">
+                                                                 =
+           <a
+                                                           =
+                     href=3D"https://unstop.com/blog/lorenz-curve"
+      =
+                                                                          c=
+lass=3D"img_box"
+                                                        =
+                        style=3D"border-radius: 8px; display: block; overfl=
+ow: hidden;"
+                                                            =
+                >
+                                                       =
+                         <img
+                                           =
+                                         src=3D"https://d8it4huxumps7.cloud=
+front.net/bites/wp-content/banners/2023/10/6527987b38a52_lorenz_curve_expla=
+ined.jpg?d=3D800x533"
+                                                   =
+                                 style=3D"width: 100%; display: block; marg=
+in: auto;"
+                                                              =
+                      width=3D"204"
+                                     =
+                                           >
+                            =
+                                                </a>
+
+                 =
+                                                           <table>
+      =
+                                                                          <=
+tr>
+                                                                     =
+               <td style=3D"font-size: 13px; line-height: 16px; color: #434=
+343; padding-top: 12px; font-weight: 500;">
+                             =
+                                                           <a
+           =
+                                                                           =
+      class=3D"h_text_color"
+                                            =
+                                                href=3D"https://unstop.com/=
+blog/lorenz-curve"
+                                                      =
+                                      style=3D"font-family: 'Roboto', sans-=
+serif; text-decoration: none; color: #434343;"
+                          =
+                                                              >
+         =
+                                                                           =
+        Lorenz Curve: Definition, Graph & Formula Explained With Example
+=
+                                                                           =
+             </a>
+                                                       =
+                             </td>
+                                      =
+                                          </tr>
+                         =
+                                                   </table>
+             =
+                                                           </td>
+        =
+                                                                           =
+                                                 </tr>
+                  =
+                                          </tbody>
+                      =
+                                  </table>
+                              =
+                      </td>
+                                             =
+   </tr>
+                                            </tbody>
+         =
+                               </table>
+
+                              =
+          <div class=3D"" style=3D"text-align: center;">
+                =
+                            <a
+                                          =
+      href=3D"https://unstop.com/all-opportunities"
+                     =
+                           style=3D"
+                                    =
+                display: inline-block;
+                                  =
+                  background-color: #0073E6;
+                            =
+                        color: #fff;
+                                    =
+                border-radius: 50px;
+                                    =
+                padding: 17px 30px;
+                                     =
+               font-weight: 500;
+                                        =
+            font-size: 16px;
+                                            =
+        line-height: 100%;
+                                              =
+      cursor: pointer;
+                                                "=
+
+                                            >
+                        =
+                        Explore more
+                                    =
+        </a>
+                                        </div>
+           =
+                         </td>
+                                </tr>
+  =
+                          </tbody>
+                        </table>
+   =
+                 =09=09=09=09=09
+=09=09=09=09=09<table cellpadding=3D"0" =
+cellspacing=3D"0" align=3D"center" border=3D"0" width=3D"700" class=3D"full=
+">
+=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09<td class=3D"higt0" styl=
+e=3D"height: 20px;"></td>
+=09=09=09=09=09=09</tr>
+=09=09=09=09=09</tabl=
+e>
+                    <style>
+=09.footer_sect a:hover {
+=09=09opacit=
+y: .8;
+=09}
+
+=09.h_text_color:hover {
+=09=09color: #0073e6 !importa=
+nt;
+=09=09text-decoration: underline !important;
+=09}
+
+=09@media (m=
+ax-width: 600px) {
+=09=09.footer_sect {
+=09=09=09display: block;
+=09=
+=09}
+
+=09=09.footer_sect .follow {
+=09=09=09border-right: 0 !importan=
+t;
+=09=09=09padding-right: 0 !important;
+=09=09=09width: 100%;
+=09=09=
+=09display: block;
+=09=09=09margin-bottom: 15px;
+=09=09}
+
+=09=09.fo=
+oter_sect .follow p,
+=09=09.footer_sect .follow div {
+=09=09=09text-ali=
+gn: center !important;
+=09=09}
+
+=09=09.footer_sect .follow p br {
+=
+=09=09=09display: none;
+=09=09}
+
+=09=09.footer_sect p,
+=09=09.foote=
+r_sect div {
+=09=09=09text-align: center !important;
+=09=09}
+
+=09=
+=09.footer_sect p {
+=09=09=09margin-bottom: 10px !important;
+=09=09}
+=
+
+=09=09.footer_store {
+=09=09=09width: 100%;
+=09=09=09text-align: cen=
+ter;
+=09=09=09display: block;
+=09=09}
+
+=09=09.footer_store .coin {=
+
+=09=09=09padding-left: 0 !important;
+=09=09}
+
+=09=09.store img {=
+
+=09=09=09margin: auto;
+=09=09=09width: 100px !important;
+=09=09}
+=
+
+=09=09.queries p {
+=09=09=09font-size: 12px !important;
+=09=09}
+=
+
+=09=09.queries .copyright {
+=09=09=09margin-top: 2px !important;
+=09=
+=09}
+=09}
+</style>
+
+<table cellpadding=3D"0" cellspacing=3D"0" alig=
+n=3D"center" border=3D"0" width=3D"700" class=3D"full">
+=09<tbody>
+=09=
+=09<tr>
+=09=09=09<td class=3D"br0" style=3D"background-color: #FFC700; bo=
+rder-radius: 16px;">
+=09=09=09=09<table cellpadding=3D"0" cellspacing=3D"=
+0" align=3D"center" border=3D"0" width=3D"700" class=3D"full">
+=09=09=09=
+=09=09<tbody>
+=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09<td style=3D"=
+padding: 20px 15px;">
+=09=09=09=09=09=09=09=09<table cellpadding=3D"0" ce=
+llspacing=3D"0" align=3D"center" bgcolor=3D"#FFC700" border=3D"0" style=3D"=
+width: 100%;">
+=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=
+=09=09=09<tr class=3D"footer_sect">
+=09=09=09=09=09=09=09=09=09=09=09<td =
+class=3D"follow" style=3D"border-right: 2px solid #383838; padding-right: 1=
+5px; text-align: center;">
+=09=09=09=09=09=09=09=09=09=09=09=09<p style=
+=3D"font-family: 'Inter', sans-serif; text-align: left; color: #383838; fon=
+t-size: 14px; font-weight: 500; margin: 0 0 15px; text-align: center;">
+=
+=09=09=09=09=09=09=09=09=09=09=09=09=09Join our evergrowing unstoppable com=
+munity
+=09=09=09=09=09=09=09=09=09=09=09=09</p>
+=09=09=09=09=09=09=09=
+=09=09=09=09=09<div style=3D"text-align: center;">
+=09=09=09=09=09=09=09=
+=09=09=09=09=09=09<a href=3D"https://www.instagram.com/unstop.world/" style=
+=3D"display: inline-block; text-decoration: none; margin-right: 12px;" targ=
+et=3D"_blank">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img src=3D"http=
+s://d8it4huxumps7.cloudfront.net/uploads/images/65e9603b5d188_group.png" al=
+t=3D"Instagram Icon" style=3D"display: block; width: 40px;">
+=09=09=09=09=
+=09=09=09=09=09=09=09=09=09</a>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<a href=3D"https://www.linkedin.com/company/unstop/" style=3D"display: i=
+nline-block; text-decoration: none; margin-right: 12px;" target=3D"_blank">=
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img src=3D"https://d8it4huxum=
+ps7.cloudfront.net/uploads/images/65e96069bb0fd_linekd.png" alt=3D"Linkedin=
+ Icon" style=3D"display: block; width: 40px;">
+=09=09=09=09=09=09=09=09=
+=09=09=09=09=09</a>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"=
+https://t.me/+ON15qceSy-IyZjY9" style=3D"display: inline-block; text-decora=
+tion: none; margin-right: 12px;" target=3D"_blank">
+=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09<img src=3D"https://d8it4huxumps7.cloudfront.net/uploa=
+ds/images/65e95ffb37522_telegram.png" alt=3D"Telegram Icon" style=3D"displa=
+y: block; width: 40px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+=
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"https://www.youtube.co=
+m/c/Unstop_World" style=3D"display: inline-block; text-decoration: none;" t=
+arget=3D"_blank">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img src=3D"h=
+ttps://d8it4huxumps7.cloudfront.net/uploads/images/65e9601011aae_youtube_2y=
+outube.png" alt=3D"Youtube Icon" style=3D"display: block; width: 40px;">
+=
+=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+=09=09=09=09=09=09=09=09=09=
+=09=09=09</div>
+=09=09=09=09=09=09=09=09=09=09=09</td>
+
+=09=09=09=09=
+=09=09=09=09=09=09=09<td class=3D"footer_store">
+=09=09=09=09=09=09=09=09=
+=09=09=09=09<table cellpadding=3D"0" cellspacing=3D"0" align=3D"center" bor=
+der=3D"0" style=3D"width: 100%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=
+<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09<td class=3D"coin" style=3D"border-right: 2px=
+ solid #383838; padding-right: 15px; padding-left: 15px; text-align: center=
+;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"font-fami=
+ly: 'Inter', sans-serif; text-align: center; color: #383838; font-size: 14p=
+x; font-weight: 500; margin: 0 0 15px;">
+=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09Explore
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div style=3D"=
+text-align: center;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+<a href=3D"https://unstop.com/pro" style=3D"display: inline-block; text-dec=
+oration: none;" target=3D"_blank">
+=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09<img src=3D"https://d8it4huxumps7.cloudfront.net/uploads/=
+images/65dc5268d4f10_unstop_pro.png" alt=3D"Unstop pro logo" style=3D"displ=
+ay: block; width: 100px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
+=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+
+=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09<td class=3D"store" style=3D"padding-left: 15px; te=
+xt-align: center;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a hr=
+ef=3D"https://play.google.com/store/apps/details?id=3Dcom.dare2compete.app"=
+ style=3D"display: block; text-decoration: none; margin-bottom: 5px;" targe=
+t=3D"_blank">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img src=
+=3D"https://d8it4huxumps7.cloudfront.net/uploads/images/65dc4425c10b7_googl=
+e_play.png" alt=3D"Play Store Icon" style=3D"display: block; width: 120px;"=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+
+=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"https://apps.apple.com/in/ap=
+p/unstop-formerly-dare2compete/id1601170365" style=3D"display: block; text-=
+decoration: none;" target=3D"_blank">
+=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09<img src=3D"https://d8it4huxumps7.cloudfront.net/uploads/=
+images/65dc442fcf07e_app_store.png" alt=3D"App Store Icon" style=3D"display=
+: block; width: 120px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09<=
+/tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=
+=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=
+=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=
+=09=09=09</td>
+=09=09=09=09=09=09</tr>
+
+=09=09=09=09=09=09<tr>
+=09=
+=09=09=09=09=09=09<td class=3D"queries" style=3D"text-align: center; paddin=
+g: 0 15px 20px;">
+=09=09=09=09=09=09=09=09<p style=3D"font-family: 'Inter=
+', sans-serif; text-align: center; color: #383838; font-size: 14px; font-we=
+ight: 500; margin: 0;">
+=09=09=09=09=09=09=09=09=09Queries? We're just on=
+e email away: <a href=3D"mailto:support@unstop.com" class=3D"h_text_color" =
+style=3D"font-family: 'Inter', sans-serif; color: #383838; text-decoration:=
+ none;">support@unstop.com</a>
+=09=09=09=09=09=09=09=09</p>
+
+=09=09=
+=09=09=09=09=09=09<div style=3D"text-align: center;">
+=09=09=09=09=09=09=
+=09=09=09<a href=3D"https://www.instagram.com/unstop.world/"
+=09=09=09=09=
+=09=09=09=09=09=09style=3D"display: inline-block; text-decoration: none; ma=
+rgin-right: 10px; width: 40px; height: 40px; background: #FAFAFA; border-ra=
+dius: 50px;"
+=09=09=09=09=09=09=09=09=09=09target=3D"_blank">
+=09=09=09=
+=09=09=09=09=09=09=09<img
+=09=09=09=09=09=09=09=09=09=09=09src=3D"https:/=
+/d8it4huxumps7.cloudfront.net/uploads/images/66433aee6e146_instagram.png"=
+
+=09=09=09=09=09=09=09=09=09=09=09alt=3D"Instagram Icon" style=3D"display=
+: block; width: 40px;">
+=09=09=09=09=09=09=09=09=09</a>
+
+=09=09=09=09=
+=09=09=09=09=09<a href=3D"https://www.linkedin.com/company/unstop/"
+=09=
+=09=09=09=09=09=09=09=09=09style=3D"display: inline-block; text-decoration:=
+ none; margin-right: 10px; width: 40px; height: 40px; background: #FAFAFA; =
+border-radius: 50px;"
+=09=09=09=09=09=09=09=09=09=09target=3D"_blank">
+=
+=09=09=09=09=09=09=09=09=09=09<img
+=09=09=09=09=09=09=09=09=09=09=09src=
+=3D"https://d8it4huxumps7.cloudfront.net/uploads/images/66433aff63c9b_linke=
+din.png"
+=09=09=09=09=09=09=09=09=09=09=09alt=3D"Linkedin Icon" style=3D"=
+display: block; width: 40px;">
+=09=09=09=09=09=09=09=09=09</a>
+
+=09=
+=09=09=09=09=09=09=09=09<a href=3D"https://t.me/+ON15qceSy-IyZjY9"
+=09=09=
+=09=09=09=09=09=09=09=09style=3D"display: inline-block; text-decoration: no=
+ne; margin-right: 10px; width: 40px; height: 40px; background: #FAFAFA; bor=
+der-radius: 50px;"
+=09=09=09=09=09=09=09=09=09=09target=3D"_blank">
+=09=
+=09=09=09=09=09=09=09=09=09<img
+=09=09=09=09=09=09=09=09=09=09=09src=3D"h=
+ttps://d8it4huxumps7.cloudfront.net/uploads/images/66433b096c58b_telegram.p=
+ng"
+=09=09=09=09=09=09=09=09=09=09=09alt=3D"Telegram Icon" style=3D"displ=
+ay: block; width: 40px;">
+=09=09=09=09=09=09=09=09=09</a>
+
+=09=09=09=
+=09=09=09=09=09=09<a=20
+=09=09=09=09=09=09=09=09=09=09href=3D"https://www.y=
+outube.com/c/Unstop_World"
+=09=09=09=09=09=09=09=09=09=09style=3D"display=
+: inline-block; text-decoration: none; width: 40px; height: 40px; backgroun=
+d: #FAFAFA; border-radius: 50px;"=20
+=09=09=09=09=09=09=09=09=09=09target=
+=3D"_blank"
+=09=09=09=09=09=09=09=09=09>
+=09=09=09=09=09=09=09=09=09=09=
+<img
+=09=09=09=09=09=09=09=09=09=09=09src=3D"https://d8it4huxumps7.cloudf=
+ront.net/uploads/images/66433b12a37a3_youtube.png"
+=09=09=09=09=09=09=09=
+=09=09=09=09alt=3D"Youtube Icon" style=3D"display: block; width: 40px;">
+=
+=09=09=09=09=09=09=09=09=09</a>
+=09=09=09=09=09=09=09=09</div>
+=09=09=
+=09=09=09=09=09</td>
+=09=09=09=09=09=09</tr>
+
+=09=09=09=09=09=09<tr>=
+
+=09=09=09=09=09=09=09<td style=3D"padding-top: 20px; text-align: center;=
+">
+=09=09=09=09=09=09=09=09<p style=3D"font-family: 'Inter', sans-serif; =
+color: #1c1c1c; font-size: 12px; font-weight: 500; margin: 0 0 10px; text-a=
+lign: center;">
+=09=09=09=09=09=09=09=09=09Get the Unstop app
+=09=09=09=
+=09=09=09=09=09</p>
+=09=09=09=09=09=09=09=09<div>
+=09=09=09=09=09=09=09=
+=09=09<a href=3D"https://play.google.com/store/apps/details?id=3Dcom.dare2c=
+ompete.app"
+=09=09=09=09=09=09=09=09=09=09style=3D"display: inline-block;=
+ text-decoration: none; margin-right: 10px;"
+=09=09=09=09=09=09=09=09=09=
+=09target=3D"_blank">
+=09=09=09=09=09=09=09=09=09=09<img
+=09=09=09=09=
+=09=09=09=09=09=09=09src=3D"https://d8it4huxumps7.cloudfront.net/uploads/im=
+ages/6641f370d8dc5_google_play.png"
+=09=09=09=09=09=09=09=09=09=09=09alt=
+=3D"Play Store Icon"
+=09=09=09=09=09=09=09=09=09=09=09style=3D"display: b=
+lock; width: 120px; border: 1px solid #1c1c1c !important; border-radius: 50=
+px; background: #1c1c1c;">
+=09=09=09=09=09=09=09=09=09</a>
+
+=09=09=09=
+=09=09=09=09=09=09<a href=3D"https://apps.apple.com/in/app/unstop-formerly-=
+dare2compete/id1601170365"
+=09=09=09=09=09=09=09=09=09=09style=3D"display=
+: inline-block; text-decoration: none;" target=3D"_blank">
+=09=09=09=09=
+=09=09=09=09=09=09<img
+=09=09=09=09=09=09=09=09=09=09=09src=3D"https://d8=
+it4huxumps7.cloudfront.net/uploads/images/6641f38f1c761_app_store.png"
+=
+=09=09=09=09=09=09=09=09=09=09=09alt=3D"App Store Icon"
+=09=09=09=09=09=
+=09=09=09=09=09=09style=3D"display: block; width: 120px; border: 1px solid =
+#1c1c1c !important; border-radius: 50px; background: #1c1c1c;">
+=09=09=09=
+=09=09=09=09=09=09</a>
+=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=
+=09=09</td>
+=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09
+=09=09=09=09=
+=09=09<tr>
+=09=09=09=09=09=09=09<td style=3D"padding-top: 20px; text-alig=
+n: center;">
+=09=09=09=09=09=09=09=09<span
+=09=09=09=09=09=09=09=09=09s=
+tyle=3D"font-family: 'Inter', sans-serif; text-align: center; color: #1c1c1=
+c; font-size: 12px; font-weight: 500; border-right: 1px solid #D9D9D9; padd=
+ing-right: 12px; margin-right: 12px;">
+=09=09=09=09=09=09=09=09=09Queries=
+? We're just one email away: <a href=3D"mailto:support@unstop.com" class=3D=
+"h_text_color"
+=09=09=09=09=09=09=09=09=09=09style=3D"font-family: 'Inter=
+', sans-serif; color: #1c1c1c; text-decoration: none;">support@unstop.com</=
+a>
+=09=09=09=09=09=09=09=09</span>
+
+=09=09=09=09=09=09=09=09<span sty=
+le=3D"font-family: 'Inter', sans-serif; text-align: center; color: #1c1c1c;=
+ font-size: 12px; font-weight: 500;">
+=09=09=09=09=09=09=09=09=09=C2=
+=A9 2024 <a class=3D"h_text_color" href=3D"https://unstop.com/"
+=09=09=09=
+=09=09=09=09=09=09=09style=3D"font-family: 'Inter', sans-serif; color: #1c1=
+c1c; text-decoration: none;">Unstop</a>.
+=09=09=09=09=09=09=09=09=09All r=
+ights reserved
+=09=09=09=09=09=09=09=09</p>
+=09=09=09=09=09=09=09</td>=
+
+=09=09=09=09=09=09</tr>
+=09=09=09=09=09</tbody>
+=09=09=09=09</table>=
+
+=09=09=09</td>
+=09=09</tr>
+=09</tbody>
+</table>;
+               =
+ </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+<=
+/html>
+
+
+--_=_swift_1718618279_788a1501a6d9136554f052ccf199a028_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html>
+<html lang=3D"en">
+
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+    <title>Registration successful</title>
+    <meta name=3D"author" content=3D"">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1.0">
+    <meta name=3D"x-apple-disable-message-reformatting">
+    <style type=3D"text/css">
+        @import  url("https://fonts.googleapis.com/css?family=3DRoboto:400,=
+500,700&display=3Dswap");
+
+        body {
+            width: auto;
+            background-color: #E5F1FC;
+            margin: 0 auto;
+            padding: 0;
+            font-size: 14px;
+            -webkit-text-size-adjust: 100% !important;
+            -ms-text-size-adjust: 100% !important;
+            -webkit-font-smoothing: antialiased;
+            font-family: "Roboto", sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        span,
+        a,
+        strong,
+        div,
+        td {
+            font-family: "Roboto", sans-serif;
+        }
+
+        img {
+            border: 0 !important;
+            outline: none !important;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0073e6;
+        }
+
+        .h_text_color:hover {
+            color: #0073e6 !important;
+            text-decoration: underline !important;
+        }
+
+        .footer_sect a:hover {
+            opacity: .8;
+        }
+
+        table {
+            border-collapse: collapse;
+            mso-table-lspace: 0px;
+            mso-table-rspace: 0px;
+        }
+
+        .img_box {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+        }
+        .invalid {
+            background-color: #fff7e0 !important;
+            border-color: #ffba00 !important;
+        }
+        .valid {
+            background-color: #d7f9eb !important;
+            border-color: #01a768 !important;
+        }
+
+        @media (max-width: 600px) {
+            body,
+            .bg_color {
+                background-color: #fff !important;
+            }
+            .full {
+                width: 100% !important;
+            }
+
+            .pdng {
+                padding: 20px 15px !important;
+            }
+            .m_pdng {
+                padding: 20px 0 !important;
+            }
+
+            .hedr_higt {
+                min-height: 210px !important;
+            }
+            .hedr_bg {
+                background-size: 150px !important;
+            }
+            .hedr {
+                padding: 15px !important;
+                background-size: 150px !important;
+            }
+            .hedr .h1 {
+                font-size: 20px !important;
+                line-height: 24px !important;
+            }
+            .hedr .p {
+                padding-top: 5px !important;
+                font-size: 14px !important;
+                line-height: 19px !important;
+            }
+            .title h2 {
+                font-size: 20px !important;
+                line-height: 24px !important;
+            }
+            .title p {
+                margin-top: 5px !important;
+                font-size: 14px !important;
+                line-height: 19px !important;
+            }
+            .title img {
+                width: 130px !important;
+            }
+
+            .share_sect {
+                display: block;
+            }
+            .left_share {
+                width: 100%;
+                display: block;
+                padding-right: 0 !important;
+            }
+            .right_share {
+                width: 100%;
+                display: block;
+                margin-top: 15px;
+                border-top: 1px dashed #ffdd66;
+                padding-top: 15px;
+                text-align: left !important;
+            }
+            .right_share img {
+                width: 40px !important;
+            }
+            .right_share img.copy {
+                width: 94px !important;
+            }
+
+            .op_list {
+                width: 50%;
+            }
+            .op_list + .op_list + .op_list {
+                display: none;
+            }
+
+            .footer_sect {
+                display: block;
+            }
+            .footer_sect .un {
+                border-right: 0 !important;
+                padding-right: 0 !important;
+                display: block;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+            .footer_sect .un div {
+                text-align: center !important;
+            }
+            .footer_sect .un img {
+                width: 80px !important;
+            }
+
+            .footer_sect .follow {
+                border-right: 0 !important;
+                padding-right: 0 !important;
+                text-align: center;
+                width: 100%;
+                display: block;
+                margin-bottom: 15px;
+                padding-left: 0 !important;
+            }
+
+            .footer_sect p {
+                font-size: 12px !important;
+                margin-bottom: 10px !important;
+                text-align: center !important;
+            }
+            .footer_sect .follow div {
+                text-align: center !important;
+            }
+
+            .footer_sect img {
+                width: 40px !important;
+            }
+            .footer_store {
+                width: 100%;
+                text-align: center;
+                display: block;
+            }
+
+            .footer_store .coin {
+                padding-left: 0 !important;
+            }
+            .footer_store div {
+                text-align: center !important;
+            }
+            .queries {
+                font-size: 13px !important;
+            }
+            .queries {
+                padding: 20px 15px 15px !important;
+            }
+            .queries tr {
+                display: block;
+            }
+            .queries td {
+                display: block;
+                text-align: center !important;
+            }
+            .queries td + td {
+                margin-top: 5px;
+            }
+            .m_none {
+                display: none !important;
+            }
+
+            .user_box {
+                width: 100% !important;
+            }
+            .user_dtls {
+                width: auto !important;
+            }
+        }
+    </style>
+</head>
+
+<body style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: bord=
+er-box; color: #74787E; height: 100%; line-height: 1.4; margin: 0; width: 1=
+00% !important; -webkit-text-size-adjust: none;">
+    <div style=3D"box-sizing: border-box; font-family: 'Roboto', sans-serif=
+; background-color: #E5F1FC; width: 100%; margin: 0; padding: 0;">
+        <style>
+=09@media (max-width: 600px) {
+=09=09.hedr_higt {
+=09=09=09background: #1c4980 !important;
+=09=09}
+
+=09=09.hedr_bg {
+=09=09=09padding: 30px 15px !important;
+=09=09}
+
+=09=09.hedr_bg .logo {
+=09=09=09height: 70px !important;
+=09=09}
+
+=09=09.hedr_bg .h1 {
+=09=09=09font-size: 20px !important;
+=09=09=09line-height: 24px !important;
+=09=09=09width: auto !important;
+=09=09=09max-width: calc(100% - 80px);
+=09=09}
+
+=09=09.h1 br {
+=09=09=09display: none;
+=09=09}
+=09}
+</style>
+
+
+<table cellpadding=3D"0" cellspacing=3D"0" align=3D"center" border=3D"0" wi=
+dth=3D"700" class=3D"full hedr_higt br0" style=3D"font-family: Avenir, Helv=
+etica, sans-serif; box-sizing: border-box; border-collapse: collapse; mso-t=
+able-lspace: 0px; mso-table-rspace: 0px; background: #FFC700; background-im=
+age: url(https://d8it4huxumps7.cloudfront.net/uploads/images/65e966d453260_=
+mail_hdr_bg.png?d=3D512x340); background-size: 256px; background-position: =
+bottom right; border-radius: 16px; background-repeat: no-repeat;">
+=09<tbody style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: =
+border-box;">
+=09=09<tr>
+=09=09=09<td class=3D"hedr_bg" style=3D"box-sizing: border-box; font-family=
+: 'Roboto', sans-serif; padding: 50px 30px;">
+=09=09=09=09<a href=3D"https://mstats.dare2compete.com/CL0/https:%2F%2Funst=
+op.com%2Fcompetitions%2F1021524%2Fregister%2Fedit%3Futm_campaign=3Dsite-ema=
+ils%26utm_medium=3Dd2c-automated%26utm_source=3Dcongratulations-your-applic=
+ation-for-cyber-security-internship-is-complete/1/0109019025a1ccf0-94b862e3=
+-39bd-40ca-a0ef-f7d9272377a3-000000/cBhydy2dyHKsQNZJpFj7W69KgjsM0saT5rVEAq7=
+0hh0=3D159" target=3D"_blank" style=3D"box-sizing: border-box; font-family:=
+ 'Roboto', sans-serif; display: block; color: inherit; text-decoration: non=
+e;">
+=09=09=09=09=09</a><table style=3D"font-family: Avenir, Helvetica, sans-ser=
+if; box-sizing: border-box; border-collapse: collapse; mso-table-lspace: 0p=
+x; mso-table-rspace: 0px; width: 100%;">
+=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09<td class=3D"logo" width=3D"70" style=3D"font-family: =
+'Roboto', sans-serif; width: 70px; min-width: 70px; height: 70px; backgroun=
+d: #fff; border-radius: 12px; background-image: url(https://d8it4huxumps7.c=
+loudfront.net/uploads/images/un-emails/white-bg.png); background-size: cove=
+r; vertical-align: middle; box-sizing: border-box;">
+=09=09=09=09=09=09=09=09<img src=3D"https://d8it4huxumps7.cloudfront.net/up=
+loads/images/75x75/665e115669bd6_organisation_image-mlDnIm5UpH965694041adi3=
+foNvdQ.png" alt=3D"Cyber Security Internship" style=3D"font-family: Avenir,=
+ Helvetica, sans-serif; box-sizing: border-box; border: 0!important; outlin=
+e: none!important; display: block; max-height: 80%; max-width: 80%; margin:=
+ auto;" width=3D"55">
+=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09<td class=3D"h1" style=3D"font-family: 'Inter', sans-s=
+erif; color: #1c4980; font-size: 30px; line-height: 34px; font-weight: 500;=
+ width: 560px; padding-left: 15px; box-sizing: border-box; vertical-align: =
+middle;">
+=09=09=09=09=09=09=09=09Cyber Security Internship
+=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09</tr>
+=09=09=09=09=09</table>
+=09=09=09=09
+=09=09=09</td>
+=09=09</tr>
+=09</tbody>
+</table>=09=09<table cellpadding=3D"0" cellspacing=3D"0" align=3D"center" b=
+order=3D"0" width=3D"700" class=3D"full" style=3D"font-family: Avenir, Helv=
+etica, sans-serif; box-sizing: border-box; border-collapse: collapse; mso-t=
+able-lspace: 0px; mso-table-rspace: 0px;">
+            <tr>
+                <td class=3D"higt0" style=3D"box-sizing: border-box; font-f=
+amily: 'Roboto', sans-serif; height: 20px;"></td>
+            </tr>
+        </table>
+        <table cellpadding=3D"0" cellspacing=3D"0" align=3D"center" bgcolor=
+=3D"#E5F1FC" border=3D"0" width=3D"100%" style=3D"font-family: Avenir, Helv=
+etica, sans-serif; box-sizing: border-box; border-collapse: collapse; mso-t=
+able-lspace: 0px; mso-table-rspace: 0px; background-color: #E5F1FC; width: =
+100%;" class=3D"bg_color">
+            <tr>
+                <td style=3D"box-sizing: border-box; font-family: 'Roboto',=
+ sans-serif;">
+                    <table cellpadding=3D"0" cellspacing=3D"0" align=3D"cen=
+ter" bgcolor=3D"#ffffff" border=3D"0" width=3D"700" class=3D"full" style=3D=
+"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; border=
+-collapse: collapse; mso-table-lspace: 0px; mso-table-rspace: 0px;">
+                        <tbody style=3D"font-family: Avenir, Helvetica, san=
+s-serif; box-sizing: border-box;">
+                            <tr>
+                                <td class=3D"pdng" style=3D"box-sizing: bor=
+der-box; font-family: 'Roboto', sans-serif; padding: 30px 50px; text-align:=
+ center;">
+                                                                           =
+ <!-- Registration Details -->
+                                        <div style=3D"box-sizing: border-bo=
+x; font-family: 'Roboto', sans-serif; text-align: left;">
+                                            <div style=3D"box-sizing: borde=
+r-box; font-family: 'Roboto', sans-serif; margin: 10px 0;">Hi Lokesh Sathin=
+i,</div>
+                                            <div style=3D"box-sizing: borde=
+r-box; font-family: 'Roboto', sans-serif;">Congratulations, you star!</div>
+                                            <div style=3D"box-sizing: borde=
+r-box; font-family: 'Roboto', sans-serif; margin-bottom: 10px;">You just ma=
+de your first move on the playground of opportunity by applying for an inte=
+rnship! =F0=9F=94=A5</div>
+                                            <div style=3D"box-sizing: borde=
+r-box; font-family: 'Roboto', sans-serif;">All the best for the next steps =
+in the process for <span style=3D"box-sizing: border-box; font-family: 'Rob=
+oto', sans-serif; font-weight: 600;">Cyber Security Internship at Prasunet =
+Company</span>. </div>
+                                            <div style=3D"box-sizing: borde=
+r-box; font-family: 'Roboto', sans-serif; margin: 10px 0;">We hope you ace =
+this opportunity! </div>
+                                            <div style=3D"box-sizing: borde=
+r-box; font-family: 'Roboto', sans-serif; margin: 10px 0;">While you wait f=
+or an update on the hiring process, explore <strong style=3D"box-sizing: bo=
+rder-box; font-family: 'Roboto', sans-serif;">Unstop</strong> to <strong st=
+yle=3D"box-sizing: border-box; font-family: 'Roboto', sans-serif;">upskill<=
+/strong> and <strong style=3D"box-sizing: border-box; font-family: 'Roboto'=
+, sans-serif;">find new opportunities</strong> to hit a six on every career=
+ move you make.   </div>
+                                            <div style=3D"box-sizing: borde=
+r-box; font-family: 'Roboto', sans-serif;">Regards, </div>
+                                            <div style=3D"box-sizing: borde=
+r-box; font-family: 'Roboto', sans-serif;">Team Unstop </div>              =
+                                 =20
+                                        </div>
+                                       =20
+                                                                    </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                   =20
+                                                                        <ta=
+ble cellpadding=3D"0" cellspacing=3D"0" align=3D"center" bgcolor=3D"#FFBA00=
+" border=3D"0" width=3D"700" class=3D"full" style=3D"font-family: Avenir, H=
+elvetica, sans-serif; box-sizing: border-box; border-collapse: collapse; ms=
+o-table-lspace: 0px; mso-table-rspace: 0px;">
+                                <tbody style=3D"font-family: Avenir, Helvet=
+ica, sans-serif; box-sizing: border-box;">
+                                    <tr>
+                                        <td class=3D"pdng" style=3D"box-siz=
+ing: border-box; font-family: 'Roboto', sans-serif; padding: 20px 40px; bac=
+kground-image: url(https://d8it4huxumps7.cloudfront.net/uploads/images/un-e=
+mails/border-bg.png?d=3D1400x160); background-size: cover; background-repea=
+t: no-repeat; background-position: center;">
+                                            <table cellpadding=3D"0" cellsp=
+acing=3D"0" align=3D"center" border=3D"0" style=3D"font-family: Avenir, Hel=
+vetica, sans-serif; box-sizing: border-box; border-collapse: collapse; mso-=
+table-lspace: 0px; mso-table-rspace: 0px; width: 100%;">
+                                                <tbody style=3D"font-family=
+: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+                                                    <tr class=3D"share_sect=
+">
+                                                        <td class=3D"left_s=
+hare" style=3D"box-sizing: border-box; font-family: 'Roboto', sans-serif; p=
+adding-right: 15px;">
+                                                            <table cellpadd=
+ing=3D"0" cellspacing=3D"0" align=3D"center" border=3D"0" style=3D"font-fam=
+ily: Avenir, Helvetica, sans-serif; box-sizing: border-box; border-collapse=
+: collapse; mso-table-lspace: 0px; mso-table-rspace: 0px; width: 100%;">
+                                                                <tr>
+                                                                    <td wid=
+th=3D"50" style=3D"box-sizing: border-box; font-family: 'Roboto', sans-seri=
+f;">
+                                                                        <im=
+g src=3D"https://d8it4huxumps7.cloudfront.net/uploads/images/un-emails/icon=
+s/refer-and-earn-icon.png?d=3D100x80" alt=3D"Share Icon" style=3D"font-fami=
+ly: Avenir, Helvetica, sans-serif; box-sizing: border-box; border: 0 !impor=
+tant; outline: none !important; display: block; max-width: 100%; width: 50p=
+x;" width=3D"50">
+                                                                    </td>
+                                                                    <td sty=
+le=3D"box-sizing: border-box; font-family: 'Roboto', sans-serif; text-align=
+: left; font-size: 14px; line-height: 120%; color: #1A1D21; font-weight: 70=
+0;">
+                                                                        Ref=
+er &amp; Earn!
+                                                                        <sp=
+an style=3D"box-sizing: border-box; font-family: 'Roboto', sans-serif; disp=
+lay: block; font-size: 12px; line-height: 100%; margin-top: 2px;">
+                                                                           =
+ Win Macbook Air M1, iPhone 14 &amp; more!
+                                                                        </s=
+pan>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+
+                                                        <td class=3D"right_=
+share" style=3D"box-sizing: border-box; font-family: 'Roboto', sans-serif; =
+text-align: right;">
+                                                            <a href=3D"http=
+s://mstats.dare2compete.com/CL0/https:%2F%2Fapi.whatsapp.com%2Fsend%3Ftext=
+=3DCyber%2520Security%2520Internship%2520-%2520https:%2F%2Funstop.com%2Fcom=
+petitions%2F1021524%3Flb=3DIvXi9D6/1/0109019025a1ccf0-94b862e3-39bd-40ca-a0=
+ef-f7d9272377a3-000000/5FWPNxHn5owe6r_5nrDgcixUESs1owXyB0o74A6-jtk=3D159" s=
+tyle=3D"box-sizing: border-box; font-family: 'Roboto', sans-serif; color: #=
+3869D4; display: inline-block; text-decoration: none;" target=3D"_blank">
+                                                                <img src=3D=
+"https://d8it4huxumps7.cloudfront.net/uploads/images/un-emails/icons/whatsa=
+pp-icon.png?d=3D100x80" alt=3D"Whatsapp Icon" style=3D"font-family: Avenir,=
+ Helvetica, sans-serif; box-sizing: border-box; border: 0 !important; outli=
+ne: none !important; display: block; max-width: 100%; width: 45px;" width=
+=3D"45">
+                                                            </a>
+
+                                                            <a href=3D"http=
+://mstats.dare2compete.com/CL0/http:%2F%2Flinkedin.com%2FshareArticle%3Fmin=
+i=3Dtrue%26url=3Dhttps:%2F%2Funstop.com%2Fcompetitions%2F1021524%3Flb=3DIvX=
+i9D6%26shareTitle=3DCyber%2520Security%2520Internship%26utm_campaign=3Dsite=
+-emails%26utm_medium=3Dd2c-automated%26utm_source=3Dcongratulations-your-ap=
+plication-for-cyber-security-internship-is-complete/1/0109019025a1ccf0-94b8=
+62e3-39bd-40ca-a0ef-f7d9272377a3-000000/6lsnjp6hdimfBXGcQpUA_vkrQTBiOLbvO7k=
+3EbhFOcQ=3D159" style=3D"box-sizing: border-box; font-family: 'Roboto', san=
+s-serif; color: #3869D4; display: inline-block; text-decoration: none;" tar=
+get=3D"_blank">
+                                                                <img src=3D=
+"https://d8it4huxumps7.cloudfront.net/uploads/images/un-emails/icons/linked=
+in-icon.png?d=3D100x80" alt=3D"Linkedin Iocn" style=3D"font-family: Avenir,=
+ Helvetica, sans-serif; box-sizing: border-box; border: 0 !important; outli=
+ne: none !important; display: block; max-width: 100%; width: 45px;" width=
+=3D"45">
+                                                            </a>
+
+                                                            <a href=3D"http=
+://mstats.dare2compete.com/CL0/http:%2F%2Ftwitter.com%2Fintent%2Ftweet%3Fte=
+xt=3DCyber%2520Security%2520Internship%2520@%2520%26url=3Dhttps:%2F%2Funsto=
+p.com%2Fcompetitions%2F1021524%3Flb=3DIvXi9D6%26utm_campaign=3Dsite-emails%=
+26utm_medium=3Dd2c-automated%26utm_source=3Dcongratulations-your-applicatio=
+n-for-cyber-security-internship-is-complete/1/0109019025a1ccf0-94b862e3-39b=
+d-40ca-a0ef-f7d9272377a3-000000/cZegh2gKLxU58zps7fcYDG5-kGJYaEMQItUQw2QRc4Q=
+=3D159" style=3D"box-sizing: border-box; font-family: 'Roboto', sans-serif;=
+ color: #3869D4; display: inline-block; text-decoration: none;" target=3D"_=
+blank">
+                                                                <img src=3D=
+"https://d8it4huxumps7.cloudfront.net/uploads/images/un-emails/icons/twitte=
+r-icon.png?d=3D100x80" alt=3D"Twitter Icon" style=3D"font-family: Avenir, H=
+elvetica, sans-serif; box-sizing: border-box; border: 0 !important; outline=
+: none !important; display: block; max-width: 100%; width: 45px;" width=3D"=
+45">
+                                                            </a>
+
+                                                            <a href=3D"http=
+s://mstats.dare2compete.com/CL0/https:%2F%2Fwww.facebook.com%2Fsharer%2Fsha=
+rer.php%3Fapp_id=3D136377486571908%26sdk=3Djoey%26u=3Dhttps:%2F%2Funstop.co=
+m%2Fcompetitions%2F1021524%3Flb=3DIvXi9D6%26utm_campaign=3Dsite-emails%26ut=
+m_medium=3Dd2c-automated%26utm_source=3Dcongratulations-your-application-fo=
+r-cyber-security-internship-is-complete/1/0109019025a1ccf0-94b862e3-39bd-40=
+ca-a0ef-f7d9272377a3-000000/-fkJx3FMqjurGy2JVIgDCpIPdl7BOq8JRs4GNQzHkyc=3D1=
+59" style=3D"box-sizing: border-box; font-family: 'Roboto', sans-serif; col=
+or: #3869D4; display: inline-block; text-decoration: none;" target=3D"_blan=
+k">
+                                                                <img src=3D=
+"https://d8it4huxumps7.cloudfront.net/uploads/images/un-emails/icons/facebo=
+ok-icon.png?d=3D100x80" alt=3D"Facebook Icon" style=3D"font-family: Avenir,=
+ Helvetica, sans-serif; box-sizing: border-box; border: 0 !important; outli=
+ne: none !important; display: block; max-width: 100%; width: 45px;" width=
+=3D"45">
+                                                            </a>
+
+                                                            <a href=3D"http=
+s://mstats.dare2compete.com/CL0/https:%2F%2Funstop.com%2Fcompetitions%2F102=
+1524%3Flb=3DIvXi9D6%26utm_campaign=3Dsite-emails%26utm_medium=3Dd2c-automat=
+ed%26utm_source=3Dcongratulations-your-application-for-cyber-security-inter=
+nship-is-complete/1/0109019025a1ccf0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-0=
+00000/CGUBxTC6NCIodsyanzXZu_26mh2z0KR5dSWiikhjkkc=3D159" style=3D"box-sizin=
+g: border-box; font-family: 'Roboto', sans-serif; color: #3869D4; display: =
+inline-block; text-decoration: none;" target=3D"_blank">
+                                                                <img src=3D=
+"https://d8it4huxumps7.cloudfront.net/uploads/images/un-emails/copylink-ico=
+n.png?d=3D235x80" alt=3D"Copylink Icon" style=3D"font-family: Avenir, Helve=
+tica, sans-serif; box-sizing: border-box; border: 0 !important; outline: no=
+ne !important; display: block; max-width: 100%; width: 110px;" width=3D"110=
+" class=3D"copy">
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                                                               =20
+                    <table cellpadding=3D"0" cellspacing=3D"0" align=3D"cen=
+ter" bgcolor=3D"#FFF3D1" border=3D"0" width=3D"700" class=3D"full" style=3D=
+"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; border=
+-collapse: collapse; mso-table-lspace: 0px; mso-table-rspace: 0px;">
+                        <tbody style=3D"font-family: Avenir, Helvetica, san=
+s-serif; box-sizing: border-box;">
+                            <tr>
+                                <td class=3D"pdng" style=3D"box-sizing: bor=
+der-box; font-family: 'Roboto', sans-serif; padding: 20px 50px 20px;">
+                                    <h3 style=3D"box-sizing: border-box; ma=
+rgin-top: 0; text-align: left; font-family: 'Roboto', sans-serif; color: #1=
+A1D21; font-size: 20px; font-weight: 600; line-height: 100%; margin: 0 0 16=
+px;">
+                                        Important Notes:
+                                    </h3>
+
+                                    <ul style=3D"font-family: Avenir, Helve=
+tica, sans-serif; box-sizing: border-box; line-height: 1.4; text-align: lef=
+t; margin: 0; padding: 0; padding-left: 15px;">
+                                        <li style=3D"box-sizing: border-box=
+; font-family: 'Roboto', sans-serif; font-size: 14px; line-height: 19px; ma=
+rgin-bottom: 10px; text-align: left; font-weight: 400; color: #1A1D21;">
+                                            You can Modify your Application=
+ till
+                                            <strong style=3D"box-sizing: bo=
+rder-box; font-family: 'Roboto', sans-serif;"> 4 Jul'24, 12:00 AM IST </str=
+ong>=20
+                                            by clicking on the pencil(=E2=
+=9C=8E) icon in the Application Details page.
+                                        </li>
+                                                                           =
+         <li style=3D"box-sizing: border-box; font-family: 'Roboto', sans-s=
+erif; font-size: 14px; line-height: 19px; margin-bottom: 10px; text-align: =
+left; font-weight: 400; color: #1A1D21;">
+                                                To Cancel your Application,=
+ click the <strong style=3D"box-sizing: border-box; font-family: 'Roboto', =
+sans-serif;">Cancel Application</strong> button in the Application Details =
+page.
+                                            </li>
+                                                                           =
+ </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                   =20
+                   =20
+
+                   =20
+                   =20
+
+
+
+                                            <table cellpadding=3D"0" cellsp=
+acing=3D"0" align=3D"center" bgcolor=3D"#E5F1FC" border=3D"0" width=3D"700"=
+ class=3D"full m_none" style=3D"font-family: Avenir, Helvetica, sans-serif;=
+ box-sizing: border-box; border-collapse: collapse; mso-table-lspace: 0px; =
+mso-table-rspace: 0px;">
+                            <tbody style=3D"font-family: Avenir, Helvetica,=
+ sans-serif; box-sizing: border-box;">
+                                <tr>
+                                    <td style=3D"box-sizing: border-box; fo=
+nt-family: 'Roboto', sans-serif; height: 10px;">
+                                        =C2=A0
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table cellpadding=3D"0" cellspacing=3D"0" align=3D=
+"center" bgcolor=3D"#ffffff" border=3D"0" width=3D"700" class=3D"full" styl=
+e=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; bo=
+rder-collapse: collapse; mso-table-lspace: 0px; mso-table-rspace: 0px;">
+                            <tbody style=3D"font-family: Avenir, Helvetica,=
+ sans-serif; box-sizing: border-box;">
+                                <tr>
+                                    <td class=3D"m_pdng" style=3D"box-sizin=
+g: border-box; font-family: 'Roboto', sans-serif; padding: 30px 23px;">
+                                        <table cellpadding=3D"0" cellspacin=
+g=3D"0" align=3D"center" border=3D"0" style=3D"font-family: Avenir, Helveti=
+ca, sans-serif; box-sizing: border-box; border-collapse: collapse; mso-tabl=
+e-lspace: 0px; mso-table-rspace: 0px; width: 100%;">
+                                            <tr>
+                                                <td style=3D"box-sizing: bo=
+rder-box; font-family: 'Roboto', sans-serif; color: #1A1D21; font-size: 20p=
+x; font-weight: 600; line-height: 100%; padding: 0 7px 16px;">
+                                                    Explore more with Unsto=
+p
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table cellpadding=3D"0" cellspacin=
+g=3D"0" align=3D"center" border=3D"0" style=3D"font-family: Avenir, Helveti=
+ca, sans-serif; box-sizing: border-box; border-collapse: collapse; mso-tabl=
+e-lspace: 0px; mso-table-rspace: 0px; width: 100%;">
+                                            <tbody style=3D"font-family: Av=
+enir, Helvetica, sans-serif; box-sizing: border-box;">
+                                               =20
+                                                                           =
+                         <tr>
+                                                        <td style=3D"box-si=
+zing: border-box; font-family: 'Roboto', sans-serif; padding-bottom: 30px;"=
+>
+                                                            <table width=3D=
+"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"font-famil=
+y: Avenir, Helvetica, sans-serif; box-sizing: border-box; border-collapse: =
+collapse; mso-table-lspace: 0px; mso-table-rspace: 0px;">
+                                                                <tr>
+                                                                    <td sty=
+le=3D"box-sizing: border-box; font-family: 'Roboto', sans-serif; color: #1A=
+1D21; font-size: 16px; font-weight: 500; padding: 0 7px 10px;">
+                                                                        Opp=
+ortunities
+                                                                    </td>
+                                                                    <td sty=
+le=3D"box-sizing: border-box; font-family: 'Roboto', sans-serif; color: #00=
+73E6; font-size: 14px; font-weight: 500; padding: 0 7px 10px; text-align: r=
+ight;">
+                                                                        <a =
+href=3D"https://mstats.dare2compete.com/CL0/https:%2F%2Funstop.com%2Fcompet=
+itions%3Futm_campaign=3Dsite-emails%26utm_medium=3Dd2c-automated%26utm_sour=
+ce=3Dcongratulations-your-application-for-cyber-security-internship-is-comp=
+lete/1/0109019025a1ccf0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-000000/QrcbVCx=
+WnC6SiZSjeE3MdN7h8uvKoHm4yot35gn6qyw=3D159" style=3D"box-sizing: border-box=
+; font-family: 'Roboto', sans-serif; text-decoration: none; display: inline=
+-block; color: #0073E6;">
+                                                                           =
+ View More
+                                                                        </a=
+>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table width=3D=
+"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"font-famil=
+y: Avenir, Helvetica, sans-serif; box-sizing: border-box; border-collapse: =
+collapse; mso-table-lspace: 0px; mso-table-rspace: 0px;">
+                                                                <tbody styl=
+e=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+                                                                    <tr cla=
+ss=3D"op_box">
+                                                                           =
+                                                                           =
+                                                                      <td c=
+lass=3D"op_list" style=3D"font-family: 'Roboto', sans-serif; padding: 0 7px=
+; width: 33%; box-sizing: border-box; vertical-align: top;">
+                                                                           =
+     <a href=3D"https://mstats.dare2compete.com/CL0/https:%2F%2Funstop.com%=
+2Finternships%2Fsales-internship-unstop-745281%3Futm_campaign=3Dsite-emails=
+%26utm_medium=3Dd2c-automated%26utm_source=3Dcongratulations-your-applicati=
+on-for-cyber-security-internship-is-complete/1/0109019025a1ccf0-94b862e3-39=
+bd-40ca-a0ef-f7d9272377a3-000000/VNMdyj26Gat5ZV7tDe77S40Gj_q83PuKt4MisNXX-V=
+U=3D159" class=3D"img_box" style=3D"box-sizing: border-box; font-family: 'R=
+oboto', sans-serif; text-decoration: none; color: #3869D4; align-items: cen=
+ter; justify-content: center; background: #fff; border-radius: 8px; display=
+: block; overflow: hidden;">
+                                                                           =
+                                                                           =
+                      <img src=3D"https://d8it4huxumps7.cloudfront.net/lamb=
+da-pdfs/opportunity-bannerImages/1718007084.png?d=3D700x400" style=3D"font-=
+family: Avenir, Helvetica, sans-serif; box-sizing: border-box; border: 0 !i=
+mportant; outline: none !important; max-width: 100%; width: 100%; display: =
+block; margin: auto;" width=3D"204">
+                                                                           =
+                                                                           =
+                  </a>
+
+                                                                           =
+     <table style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing=
+: border-box; border-collapse: collapse; mso-table-lspace: 0px; mso-table-r=
+space: 0px;">
+                                                                           =
+         <tr>
+                                                                           =
+             <td style=3D"box-sizing: border-box; font-family: 'Roboto', sa=
+ns-serif; font-size: 13px; line-height: 16px; color: #434343; padding-top: =
+12px; font-weight: 500;">
+                                                                           =
+                 <a class=3D"h_text_color" href=3D"https://mstats.dare2comp=
+ete.com/CL0/https:%2F%2Funstop.com%2Finternships%2Fsales-internship-unstop-=
+745281%3Futm_campaign=3Dsite-emails%26utm_medium=3Dd2c-automated%26utm_sour=
+ce=3Dcongratulations-your-application-for-cyber-security-internship-is-comp=
+lete/2/0109019025a1ccf0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-000000/5ZlHibO=
+Z_jFTtlH-EmcXjlHBQuTTPZvf5eaY_-OiPgw=3D159" style=3D"box-sizing: border-box=
+; font-family: 'Roboto', sans-serif; text-decoration: none; color: #434343;=
+">
+                                                                           =
+                     Unstop Pro Internship
+                                                                           =
+                 </a>
+                                                                           =
+             </td>
+                                                                           =
+         </tr>
+                                                                           =
+         <tr>
+                                                                           =
+             <td style=3D"box-sizing: border-box; font-family: 'Roboto', sa=
+ns-serif; display: block; color: #5a5a5a; font-size: 12px; line-height: 16p=
+x; padding-top: 5px; font-weight: 500;">
+                                                                           =
+                 <a class=3D"h_text_color" href=3D"https://mstats.dare2comp=
+ete.com/CL0/https:%2F%2Funstop.com%2Finternships%2Fsales-internship-unstop-=
+745281%3Futm_campaign=3Dsite-emails%26utm_medium=3Dd2c-automated%26utm_sour=
+ce=3Dcongratulations-your-application-for-cyber-security-internship-is-comp=
+lete/3/0109019025a1ccf0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-000000/30Uj8oR=
+s_s74VOY0xRZoxt253YebKF-a1Okci94RoHw=3D159" style=3D"box-sizing: border-box=
+; font-family: 'Roboto', sans-serif; text-decoration: none; color: #5a5a5a;=
+">
+                                                                           =
+                     Unstop
+                                                                           =
+                 </a>
+                                                                           =
+             </td>
+                                                                           =
+         </tr>
+                                                                           =
+     </table>
+                                                                           =
+ </td>
+                                                                           =
+                                                                         <t=
+d class=3D"op_list" style=3D"font-family: 'Roboto', sans-serif; padding: 0 =
+7px; width: 33%; box-sizing: border-box; vertical-align: top;">
+                                                                           =
+     <a href=3D"https://mstats.dare2compete.com/CL0/https:%2F%2Funstop.com%=
+2Fjobs%2Fassociate-web-operations-hybrid-mode-unstop-871432%3Futm_campaign=
+=3Dsite-emails%26utm_medium=3Dd2c-automated%26utm_source=3Dcongratulations-=
+your-application-for-cyber-security-internship-is-complete/1/0109019025a1cc=
+f0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-000000/IhtxhNCmeQf8vAnH82-UPiTiE1Qr=
+i79p0NZyI3dq28g=3D159" class=3D"img_box" style=3D"box-sizing: border-box; f=
+ont-family: 'Roboto', sans-serif; text-decoration: none; color: #3869D4; al=
+ign-items: center; justify-content: center; background: #fff; border-radius=
+: 8px; display: block; overflow: hidden;">
+                                                                           =
+                                                                           =
+                      <img src=3D"https://d8it4huxumps7.cloudfront.net/lamb=
+da-pdfs/opportunity-bannerImages/1714450601.png?d=3D700x400" style=3D"font-=
+family: Avenir, Helvetica, sans-serif; box-sizing: border-box; border: 0 !i=
+mportant; outline: none !important; max-width: 100%; width: 100%; display: =
+block; margin: auto;" width=3D"204">
+                                                                           =
+                                                                           =
+                  </a>
+
+                                                                           =
+     <table style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing=
+: border-box; border-collapse: collapse; mso-table-lspace: 0px; mso-table-r=
+space: 0px;">
+                                                                           =
+         <tr>
+                                                                           =
+             <td style=3D"box-sizing: border-box; font-family: 'Roboto', sa=
+ns-serif; font-size: 13px; line-height: 16px; color: #434343; padding-top: =
+12px; font-weight: 500;">
+                                                                           =
+                 <a class=3D"h_text_color" href=3D"https://mstats.dare2comp=
+ete.com/CL0/https:%2F%2Funstop.com%2Fjobs%2Fassociate-web-operations-hybrid=
+-mode-unstop-871432%3Futm_campaign=3Dsite-emails%26utm_medium=3Dd2c-automat=
+ed%26utm_source=3Dcongratulations-your-application-for-cyber-security-inter=
+nship-is-complete/2/0109019025a1ccf0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-0=
+00000/jFINoTQh0AF9SvQFIO_PX4q0kRlgw7C6F8mnNVZhkIA=3D159" style=3D"box-sizin=
+g: border-box; font-family: 'Roboto', sans-serif; text-decoration: none; co=
+lor: #434343;">
+                                                                           =
+                     Associate Web Operations (Hybrid Mode)
+                                                                           =
+                 </a>
+                                                                           =
+             </td>
+                                                                           =
+         </tr>
+                                                                           =
+         <tr>
+                                                                           =
+             <td style=3D"box-sizing: border-box; font-family: 'Roboto', sa=
+ns-serif; display: block; color: #5a5a5a; font-size: 12px; line-height: 16p=
+x; padding-top: 5px; font-weight: 500;">
+                                                                           =
+                 <a class=3D"h_text_color" href=3D"https://mstats.dare2comp=
+ete.com/CL0/https:%2F%2Funstop.com%2Fjobs%2Fassociate-web-operations-hybrid=
+-mode-unstop-871432%3Futm_campaign=3Dsite-emails%26utm_medium=3Dd2c-automat=
+ed%26utm_source=3Dcongratulations-your-application-for-cyber-security-inter=
+nship-is-complete/3/0109019025a1ccf0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-0=
+00000/fXmY80gB-3XtkO5luwM9xGOiGY0EwSfin9hQCawlgYM=3D159" style=3D"box-sizin=
+g: border-box; font-family: 'Roboto', sans-serif; text-decoration: none; co=
+lor: #5a5a5a;">
+                                                                           =
+                     Unstop
+                                                                           =
+                 </a>
+                                                                           =
+             </td>
+                                                                           =
+         </tr>
+                                                                           =
+     </table>
+                                                                           =
+ </td>
+                                                                           =
+                                                                         <t=
+d class=3D"op_list" style=3D"font-family: 'Roboto', sans-serif; padding: 0 =
+7px; width: 33%; box-sizing: border-box; vertical-align: top;">
+                                                                           =
+     <a href=3D"https://mstats.dare2compete.com/CL0/https:%2F%2Funstop.com%=
+2Finternships%2Fsales-ops-internship-consultbae-india-private-limited-87198=
+8%3Futm_campaign=3Dsite-emails%26utm_medium=3Dd2c-automated%26utm_source=3D=
+congratulations-your-application-for-cyber-security-internship-is-complete/=
+1/0109019025a1ccf0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-000000/K_hLI1tAjtbs=
+hrH8bIgMijaRurt4CBDC_RcVYOcR0yQ=3D159" class=3D"img_box" style=3D"box-sizin=
+g: border-box; font-family: 'Roboto', sans-serif; text-decoration: none; co=
+lor: #3869D4; align-items: center; justify-content: center; background: #ff=
+f; border-radius: 8px; display: block; overflow: hidden;">
+                                                                           =
+                                                                           =
+                      <img src=3D"https://d8it4huxumps7.cloudfront.net/lamb=
+da-pdfs/opportunity-bannerImages/1707374211.png?d=3D700x400" style=3D"font-=
+family: Avenir, Helvetica, sans-serif; box-sizing: border-box; border: 0 !i=
+mportant; outline: none !important; max-width: 100%; width: 100%; display: =
+block; margin: auto;" width=3D"204">
+                                                                           =
+                                                                           =
+                  </a>
+
+                                                                           =
+     <table style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing=
+: border-box; border-collapse: collapse; mso-table-lspace: 0px; mso-table-r=
+space: 0px;">
+                                                                           =
+         <tr>
+                                                                           =
+             <td style=3D"box-sizing: border-box; font-family: 'Roboto', sa=
+ns-serif; font-size: 13px; line-height: 16px; color: #434343; padding-top: =
+12px; font-weight: 500;">
+                                                                           =
+                 <a class=3D"h_text_color" href=3D"https://mstats.dare2comp=
+ete.com/CL0/https:%2F%2Funstop.com%2Finternships%2Fsales-ops-internship-con=
+sultbae-india-private-limited-871988%3Futm_campaign=3Dsite-emails%26utm_med=
+ium=3Dd2c-automated%26utm_source=3Dcongratulations-your-application-for-cyb=
+er-security-internship-is-complete/2/0109019025a1ccf0-94b862e3-39bd-40ca-a0=
+ef-f7d9272377a3-000000/7T7f-HElk1btZsC72PpM2u3UxHse0YhqbP7TbLlAtz8=3D159" s=
+tyle=3D"box-sizing: border-box; font-family: 'Roboto', sans-serif; text-dec=
+oration: none; color: #434343;">
+                                                                           =
+                     Sales Ops Internship
+                                                                           =
+                 </a>
+                                                                           =
+             </td>
+                                                                           =
+         </tr>
+                                                                           =
+         <tr>
+                                                                           =
+             <td style=3D"box-sizing: border-box; font-family: 'Roboto', sa=
+ns-serif; display: block; color: #5a5a5a; font-size: 12px; line-height: 16p=
+x; padding-top: 5px; font-weight: 500;">
+                                                                           =
+                 <a class=3D"h_text_color" href=3D"https://mstats.dare2comp=
+ete.com/CL0/https:%2F%2Funstop.com%2Finternships%2Fsales-ops-internship-con=
+sultbae-india-private-limited-871988%3Futm_campaign=3Dsite-emails%26utm_med=
+ium=3Dd2c-automated%26utm_source=3Dcongratulations-your-application-for-cyb=
+er-security-internship-is-complete/3/0109019025a1ccf0-94b862e3-39bd-40ca-a0=
+ef-f7d9272377a3-000000/0wJLK-Cyzc4THrHfBBvwAzLOzhMojfisDJLkAVQe6P4=3D159" s=
+tyle=3D"box-sizing: border-box; font-family: 'Roboto', sans-serif; text-dec=
+oration: none; color: #5a5a5a;">
+                                                                           =
+                     ConsultBae India Private...
+                                                                           =
+                 </a>
+                                                                           =
+             </td>
+                                                                           =
+         </tr>
+                                                                           =
+     </table>
+                                                                           =
+ </td>
+                                                                           =
+                                                                 </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                               =20
+                                               =20
+                                               =20
+
+                                               =20
+                                                <tr>
+                                                    <td style=3D"box-sizing=
+: border-box; font-family: 'Roboto', sans-serif; padding-bottom: 30px;">
+                                                        <table width=3D"100=
+%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"font-family: A=
+venir, Helvetica, sans-serif; box-sizing: border-box; border-collapse: coll=
+apse; mso-table-lspace: 0px; mso-table-rspace: 0px;">
+                                                            <tr>
+                                                                <td colspan=
+=3D"2" style=3D"box-sizing: border-box; font-family: 'Roboto', sans-serif; =
+color: #1A1D21; font-size: 16px; font-weight: 500; padding: 0 7px 10px;">
+                                                                    Article=
+s
+                                                                </td>
+                                                                <td style=
+=3D"box-sizing: border-box; font-family: 'Roboto', sans-serif; color: #0073=
+E6; font-size: 14px; font-weight: 500; padding: 0 7px 10px; text-align: rig=
+ht;">
+                                                                    <a href=
+=3D"https://mstats.dare2compete.com/CL0/https:%2F%2Funstop.com%2Farticles%3=
+Futm_campaign=3Dsite-emails%26utm_medium=3Dd2c-automated%26utm_source=3Dcon=
+gratulations-your-application-for-cyber-security-internship-is-complete/1/0=
+109019025a1ccf0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-000000/P5qoJLrtVycouZj=
+_U5-DL7VfL_y24CEffYSsQidSHfQ=3D159" style=3D"box-sizing: border-box; font-f=
+amily: 'Roboto', sans-serif; text-decoration: none; display: inline-block; =
+color: #0073E6;">
+                                                                        Vie=
+w More
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <table width=3D"100=
+%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"font-family: A=
+venir, Helvetica, sans-serif; box-sizing: border-box; border-collapse: coll=
+apse; mso-table-lspace: 0px; mso-table-rspace: 0px;">
+                                                            <tbody style=3D=
+"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+                                                                <tr class=
+=3D"op_box">
+                                                                           =
+                                                                 <td class=
+=3D"op_list" style=3D"font-family: 'Roboto', sans-serif; padding: 0 7px; wi=
+dth: 33%; box-sizing: border-box; vertical-align: top;">
+                                                                           =
+ <a href=3D"https://mstats.dare2compete.com/CL0/https:%2F%2Funstop.com%2Fbl=
+og%2Frole-of-soft-skills-in-modern-hiring%3Futm_campaign=3Dsite-emails%26ut=
+m_medium=3Dd2c-automated%26utm_source=3Dcongratulations-your-application-fo=
+r-cyber-security-internship-is-complete/1/0109019025a1ccf0-94b862e3-39bd-40=
+ca-a0ef-f7d9272377a3-000000/IUji8Qa3AaEv28PWsRuatqjut3Hs-i9IFLR_-OMhs9k=3D1=
+59" class=3D"img_box" style=3D"box-sizing: border-box; font-family: 'Roboto=
+', sans-serif; text-decoration: none; color: #3869D4; align-items: center; =
+justify-content: center; background: #fff; border-radius: 8px; display: blo=
+ck; overflow: hidden;">
+                                                                           =
+     <img src=3D"https://d8it4huxumps7.cloudfront.net/bites/wp-content/bann=
+ers/2023/10/6529103d80aa7_soft_skills_in_hiring.jpg?d=3D800x533" style=3D"f=
+ont-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; border: =
+0 !important; outline: none !important; max-width: 100%; width: 100%; displ=
+ay: block; margin: auto;" width=3D"204">
+                                                                           =
+ </a>
+
+                                                                           =
+ <table style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: bo=
+rder-box; border-collapse: collapse; mso-table-lspace: 0px; mso-table-rspac=
+e: 0px;">
+                                                                           =
+     <tr>
+                                                                           =
+         <td style=3D"box-sizing: border-box; font-family: 'Roboto', sans-s=
+erif; font-size: 13px; line-height: 16px; color: #434343; padding-top: 12px=
+; font-weight: 500;">
+                                                                           =
+             <a class=3D"h_text_color" href=3D"https://mstats.dare2compete.=
+com/CL0/https:%2F%2Funstop.com%2Fblog%2Frole-of-soft-skills-in-modern-hirin=
+g%3Futm_campaign=3Dsite-emails%26utm_medium=3Dd2c-automated%26utm_source=3D=
+congratulations-your-application-for-cyber-security-internship-is-complete/=
+2/0109019025a1ccf0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-000000/qsG4vikco8UT=
+zVz1NF91uiKBr_WifZWf0l_6eqBvyyg=3D159" style=3D"box-sizing: border-box; fon=
+t-family: 'Roboto', sans-serif; text-decoration: none; color: #434343;">
+                                                                           =
+                 Role Of Soft Skills In Modern Hiring Can't Be Ignored. Her=
+e's Why
+                                                                           =
+             </a>
+                                                                           =
+         </td>
+                                                                           =
+     </tr>
+                                                                           =
+ </table>
+                                                                        </t=
+d>
+                                                                           =
+                                                                 <td class=
+=3D"op_list" style=3D"font-family: 'Roboto', sans-serif; padding: 0 7px; wi=
+dth: 33%; box-sizing: border-box; vertical-align: top;">
+                                                                           =
+ <a href=3D"https://mstats.dare2compete.com/CL0/https:%2F%2Funstop.com%2Fbl=
+og%2Fs-somanath-on-why-iitians-turn-away-job-offers-from-isro%3Futm_campaig=
+n=3Dsite-emails%26utm_medium=3Dd2c-automated%26utm_source=3Dcongratulations=
+-your-application-for-cyber-security-internship-is-complete/1/0109019025a1c=
+cf0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-000000/rbKtrYaRpmOUn5jeeqyWzoTQH0R=
+BBZBdPLwSTYOFWAo=3D159" class=3D"img_box" style=3D"box-sizing: border-box; =
+font-family: 'Roboto', sans-serif; text-decoration: none; color: #3869D4; a=
+lign-items: center; justify-content: center; background: #fff; border-radiu=
+s: 8px; display: block; overflow: hidden;">
+                                                                           =
+     <img src=3D"https://d8it4huxumps7.cloudfront.net/bites/wp-content/bann=
+ers/2023/10/6527f80b10a0a_isro_iit_.png?d=3D800x533" style=3D"font-family: =
+Avenir, Helvetica, sans-serif; box-sizing: border-box; border: 0 !important=
+; outline: none !important; max-width: 100%; width: 100%; display: block; m=
+argin: auto;" width=3D"204">
+                                                                           =
+ </a>
+
+                                                                           =
+ <table style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: bo=
+rder-box; border-collapse: collapse; mso-table-lspace: 0px; mso-table-rspac=
+e: 0px;">
+                                                                           =
+     <tr>
+                                                                           =
+         <td style=3D"box-sizing: border-box; font-family: 'Roboto', sans-s=
+erif; font-size: 13px; line-height: 16px; color: #434343; padding-top: 12px=
+; font-weight: 500;">
+                                                                           =
+             <a class=3D"h_text_color" href=3D"https://mstats.dare2compete.=
+com/CL0/https:%2F%2Funstop.com%2Fblog%2Fs-somanath-on-why-iitians-turn-away=
+-job-offers-from-isro%3Futm_campaign=3Dsite-emails%26utm_medium=3Dd2c-autom=
+ated%26utm_source=3Dcongratulations-your-application-for-cyber-security-int=
+ernship-is-complete/2/0109019025a1ccf0-94b862e3-39bd-40ca-a0ef-f7d9272377a3=
+-000000/4ZlsFUxAupWjSLaH659O3I1Ii2UPMTRzEu8QlLhXz5k=3D159" style=3D"box-siz=
+ing: border-box; font-family: 'Roboto', sans-serif; text-decoration: none; =
+color: #434343;">
+                                                                           =
+                 Pay Versus Passion Conundrum: Why Do IITians Turn Away Job=
+ Offers From ISRO?
+                                                                           =
+             </a>
+                                                                           =
+         </td>
+                                                                           =
+     </tr>
+                                                                           =
+ </table>
+                                                                        </t=
+d>
+                                                                           =
+                                                                 <td class=
+=3D"op_list" style=3D"font-family: 'Roboto', sans-serif; padding: 0 7px; wi=
+dth: 33%; box-sizing: border-box; vertical-align: top;">
+                                                                           =
+ <a href=3D"https://mstats.dare2compete.com/CL0/https:%2F%2Funstop.com%2Fbl=
+og%2Florenz-curve%3Futm_campaign=3Dsite-emails%26utm_medium=3Dd2c-automated=
+%26utm_source=3Dcongratulations-your-application-for-cyber-security-interns=
+hip-is-complete/1/0109019025a1ccf0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-000=
+000/I6CCGlZ3c1q9Su7ypm0LHDG51jAGnx5OGIyn13o4ZZQ=3D159" class=3D"img_box" st=
+yle=3D"box-sizing: border-box; font-family: 'Roboto', sans-serif; text-deco=
+ration: none; color: #3869D4; align-items: center; justify-content: center;=
+ background: #fff; border-radius: 8px; display: block; overflow: hidden;">
+                                                                           =
+     <img src=3D"https://d8it4huxumps7.cloudfront.net/bites/wp-content/bann=
+ers/2023/10/6527987b38a52_lorenz_curve_explained.jpg?d=3D800x533" style=3D"=
+font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; border:=
+ 0 !important; outline: none !important; max-width: 100%; width: 100%; disp=
+lay: block; margin: auto;" width=3D"204">
+                                                                           =
+ </a>
+
+                                                                           =
+ <table style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: bo=
+rder-box; border-collapse: collapse; mso-table-lspace: 0px; mso-table-rspac=
+e: 0px;">
+                                                                           =
+     <tr>
+                                                                           =
+         <td style=3D"box-sizing: border-box; font-family: 'Roboto', sans-s=
+erif; font-size: 13px; line-height: 16px; color: #434343; padding-top: 12px=
+; font-weight: 500;">
+                                                                           =
+             <a class=3D"h_text_color" href=3D"https://mstats.dare2compete.=
+com/CL0/https:%2F%2Funstop.com%2Fblog%2Florenz-curve%3Futm_campaign=3Dsite-=
+emails%26utm_medium=3Dd2c-automated%26utm_source=3Dcongratulations-your-app=
+lication-for-cyber-security-internship-is-complete/2/0109019025a1ccf0-94b86=
+2e3-39bd-40ca-a0ef-f7d9272377a3-000000/-YddAiLb7YPGm-5NzoxGLoJM-fev-S98eJ_7=
+AXDoRxc=3D159" style=3D"box-sizing: border-box; font-family: 'Roboto', sans=
+-serif; text-decoration: none; color: #434343;">
+                                                                           =
+                 Lorenz Curve: Definition, Graph &amp; Formula Explained Wi=
+th Example
+                                                                           =
+             </a>
+                                                                           =
+         </td>
+                                                                           =
+     </tr>
+                                                                           =
+ </table>
+                                                                        </t=
+d>
+                                                                           =
+                                                         </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <div class=3D"" style=3D"box-sizing=
+: border-box; font-family: 'Roboto', sans-serif; text-align: center;">
+                                            <a href=3D"https://mstats.dare2=
+compete.com/CL0/https:%2F%2Funstop.com%2Fall-opportunities%3Futm_campaign=
+=3Dsite-emails%26utm_medium=3Dd2c-automated%26utm_source=3Dcongratulations-=
+your-application-for-cyber-security-internship-is-complete/1/0109019025a1cc=
+f0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-000000/ahKF7qJMcN7evTtGBjtnR9bcmTxQ=
+6GlAWDlAyGmRRQA=3D159" style=3D"box-sizing: border-box; font-family: 'Robot=
+o', sans-serif; text-decoration: none; display: inline-block; background-co=
+lor: #0073E6; color: #fff; border-radius: 50px; padding: 17px 30px; font-we=
+ight: 500; font-size: 16px; line-height: 100%; cursor: pointer;">
+                                                Explore more
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    =09=09=09=09=09
+=09=09=09=09=09<table cellpadding=3D"0" cellspacing=3D"0" align=3D"center" =
+border=3D"0" width=3D"700" class=3D"full" style=3D"font-family: Avenir, Hel=
+vetica, sans-serif; box-sizing: border-box; border-collapse: collapse; mso-=
+table-lspace: 0px; mso-table-rspace: 0px;">
+=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09<td class=3D"higt0" style=3D"box-sizing: border-box; f=
+ont-family: 'Roboto', sans-serif; height: 20px;"></td>
+=09=09=09=09=09=09</tr>
+=09=09=09=09=09</table>
+                    <style>
+=09.footer_sect a:hover {
+=09=09opacity: .8;
+=09}
+
+=09.h_text_color:hover {
+=09=09color: #0073e6 !important;
+=09=09text-decoration: underline !important;
+=09}
+
+=09@media (max-width: 600px) {
+=09=09.footer_sect {
+=09=09=09display: block;
+=09=09}
+
+=09=09.footer_sect .follow {
+=09=09=09border-right: 0 !important;
+=09=09=09padding-right: 0 !important;
+=09=09=09width: 100%;
+=09=09=09display: block;
+=09=09=09margin-bottom: 15px;
+=09=09}
+
+=09=09.footer_sect .follow p,
+=09=09.footer_sect .follow div {
+=09=09=09text-align: center !important;
+=09=09}
+
+=09=09.footer_sect .follow p br {
+=09=09=09display: none;
+=09=09}
+
+=09=09.footer_sect p,
+=09=09.footer_sect div {
+=09=09=09text-align: center !important;
+=09=09}
+
+=09=09.footer_sect p {
+=09=09=09margin-bottom: 10px !important;
+=09=09}
+
+=09=09.footer_store {
+=09=09=09width: 100%;
+=09=09=09text-align: center;
+=09=09=09display: block;
+=09=09}
+
+=09=09.footer_store .coin {
+=09=09=09padding-left: 0 !important;
+=09=09}
+
+=09=09.store img {
+=09=09=09margin: auto;
+=09=09=09width: 100px !important;
+=09=09}
+
+=09=09.queries p {
+=09=09=09font-size: 12px !important;
+=09=09}
+
+=09=09.queries .copyright {
+=09=09=09margin-top: 2px !important;
+=09=09}
+=09}
+</style>
+
+<table cellpadding=3D"0" cellspacing=3D"0" align=3D"center" border=3D"0" wi=
+dth=3D"700" class=3D"full" style=3D"font-family: Avenir, Helvetica, sans-se=
+rif; box-sizing: border-box; border-collapse: collapse; mso-table-lspace: 0=
+px; mso-table-rspace: 0px;">
+=09<tbody style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: =
+border-box;">
+=09=09<tr>
+=09=09=09<td class=3D"br0" style=3D"box-sizing: border-box; font-family: 'R=
+oboto', sans-serif; background-color: #FFC700; border-radius: 16px;">
+=09=09=09=09<table cellpadding=3D"0" cellspacing=3D"0" align=3D"center" bor=
+der=3D"0" width=3D"700" class=3D"full" style=3D"font-family: Avenir, Helvet=
+ica, sans-serif; box-sizing: border-box; border-collapse: collapse; mso-tab=
+le-lspace: 0px; mso-table-rspace: 0px;">
+=09=09=09=09=09<tbody style=3D"font-family: Avenir, Helvetica, sans-serif; =
+box-sizing: border-box;">
+=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09<td style=3D"box-sizing: border-box; font-family: 'Rob=
+oto', sans-serif; padding: 20px 15px;">
+=09=09=09=09=09=09=09=09<table cellpadding=3D"0" cellspacing=3D"0" align=3D=
+"center" bgcolor=3D"#FFC700" border=3D"0" style=3D"font-family: Avenir, Hel=
+vetica, sans-serif; box-sizing: border-box; border-collapse: collapse; mso-=
+table-lspace: 0px; mso-table-rspace: 0px; width: 100%;">
+=09=09=09=09=09=09=09=09=09<tbody style=3D"font-family: Avenir, Helvetica, =
+sans-serif; box-sizing: border-box;">
+=09=09=09=09=09=09=09=09=09=09<tr class=3D"footer_sect">
+=09=09=09=09=09=09=09=09=09=09=09<td class=3D"follow" style=3D"box-sizing: =
+border-box; font-family: 'Roboto', sans-serif; border-right: 2px solid #383=
+838; padding-right: 15px; text-align: center;">
+=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"box-sizing: border-box; lin=
+e-height: 1.5em; margin-top: 0; font-family: 'Inter', sans-serif; text-alig=
+n: center; color: #383838; font-size: 14px; font-weight: 500; margin: 0 0 1=
+5px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09Join our evergrowing unstoppable com=
+munity
+=09=09=09=09=09=09=09=09=09=09=09=09</p>
+=09=09=09=09=09=09=09=09=09=09=09=09<div style=3D"box-sizing: border-box; f=
+ont-family: 'Roboto', sans-serif; text-align: center;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"https://mstats.dare2compe=
+te.com/CL0/https:%2F%2Fwww.instagram.com%2Funstop.world%2F/1/0109019025a1cc=
+f0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-000000/F8dKBqDFpoSwYzuC6oxX4o48OLX3=
+GXBVJ0Zfs4uleOE=3D159" style=3D"box-sizing: border-box; font-family: 'Robot=
+o', sans-serif; color: #3869D4; display: inline-block; text-decoration: non=
+e; margin-right: 12px;" target=3D"_blank">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img src=3D"https://d8it4huxumps7=
+.cloudfront.net/uploads/images/65e9603b5d188_group.png" alt=3D"Instagram Ic=
+on" style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border=
+-box; border: 0 !important; outline: none !important; max-width: 100%; disp=
+lay: block; width: 40px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"https://mstats.dare2compe=
+te.com/CL0/https:%2F%2Fwww.linkedin.com%2Fcompany%2Funstop%2F/1/0109019025a=
+1ccf0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-000000/XPUARhTJObblsZaJCJSJjLeAC=
+ZjStRPk7fK8vepdZ4o=3D159" style=3D"box-sizing: border-box; font-family: 'Ro=
+boto', sans-serif; color: #3869D4; display: inline-block; text-decoration: =
+none; margin-right: 12px;" target=3D"_blank">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img src=3D"https://d8it4huxumps7=
+.cloudfront.net/uploads/images/65e96069bb0fd_linekd.png" alt=3D"Linkedin Ic=
+on" style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border=
+-box; border: 0 !important; outline: none !important; max-width: 100%; disp=
+lay: block; width: 40px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"https://mstats.dare2compe=
+te.com/CL0/https:%2F%2Ft.me%2F%2BON15qceSy-IyZjY9/1/0109019025a1ccf0-94b862=
+e3-39bd-40ca-a0ef-f7d9272377a3-000000/AqHI9HRPOkwh0ufJeWc95xgEB3DmMkohMYUsK=
+R8tC9Y=3D159" style=3D"box-sizing: border-box; font-family: 'Roboto', sans-=
+serif; color: #3869D4; display: inline-block; text-decoration: none; margin=
+-right: 12px;" target=3D"_blank">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img src=3D"https://d8it4huxumps7=
+.cloudfront.net/uploads/images/65e95ffb37522_telegram.png" alt=3D"Telegram =
+Icon" style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: bord=
+er-box; border: 0 !important; outline: none !important; max-width: 100%; di=
+splay: block; width: 40px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"https://mstats.dare2compe=
+te.com/CL0/https:%2F%2Fwww.youtube.com%2Fc%2FUnstop_World/1/0109019025a1ccf=
+0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-000000/c0cG_Ity1Hoviszag4k9PXfHVNQpC=
+WA9894YNl-n1nc=3D159" style=3D"box-sizing: border-box; font-family: 'Roboto=
+', sans-serif; color: #3869D4; display: inline-block; text-decoration: none=
+;" target=3D"_blank">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img src=3D"https://d8it4huxumps7=
+.cloudfront.net/uploads/images/65e9601011aae_youtube_2youtube.png" alt=3D"Y=
+outube Icon" style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizin=
+g: border-box; border: 0 !important; outline: none !important; max-width: 1=
+00%; display: block; width: 40px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09=09=09</td>
+
+=09=09=09=09=09=09=09=09=09=09=09<td class=3D"footer_store" style=3D"box-si=
+zing: border-box; font-family: 'Roboto', sans-serif;">
+=09=09=09=09=09=09=09=09=09=09=09=09<table cellpadding=3D"0" cellspacing=3D=
+"0" align=3D"center" border=3D"0" style=3D"font-family: Avenir, Helvetica, =
+sans-serif; box-sizing: border-box; border-collapse: collapse; mso-table-ls=
+pace: 0px; mso-table-rspace: 0px; width: 100%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody style=3D"font-family: Avenir,=
+ Helvetica, sans-serif; box-sizing: border-box;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td class=3D"coin" style=3D"bo=
+x-sizing: border-box; font-family: 'Roboto', sans-serif; border-right: 2px =
+solid #383838; padding-right: 15px; padding-left: 15px; text-align: center;=
+">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"box-sizing: bor=
+der-box; line-height: 1.5em; margin-top: 0; font-family: 'Inter', sans-seri=
+f; text-align: center; color: #383838; font-size: 14px; font-weight: 500; m=
+argin: 0 0 15px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Explore
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div style=3D"box-sizing: b=
+order-box; font-family: 'Roboto', sans-serif; text-align: center;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"https://mstat=
+s.dare2compete.com/CL0/https:%2F%2Funstop.com%2Fpro%3Futm_campaign=3Dsite-e=
+mails%26utm_medium=3Dd2c-automated%26utm_source=3Dcongratulations-your-appl=
+ication-for-cyber-security-internship-is-complete/1/0109019025a1ccf0-94b862=
+e3-39bd-40ca-a0ef-f7d9272377a3-000000/jANjQnsXpzUzHP42m7nX_mS7YW-xB8IKgilF0=
+-oYFGk=3D159" style=3D"box-sizing: border-box; font-family: 'Roboto', sans-=
+serif; color: #3869D4; display: inline-block; text-decoration: none;" targe=
+t=3D"_blank">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img src=3D"https://d=
+8it4huxumps7.cloudfront.net/uploads/images/65dc5268d4f10_unstop_pro.png" al=
+t=3D"Unstop pro logo" style=3D"font-family: Avenir, Helvetica, sans-serif; =
+box-sizing: border-box; border: 0 !important; outline: none !important; max=
+-width: 100%; display: block; width: 100px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td class=3D"store" style=3D"b=
+ox-sizing: border-box; font-family: 'Roboto', sans-serif; padding-left: 15p=
+x; text-align: center;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"https://mstats.d=
+are2compete.com/CL0/https:%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3F=
+id=3Dcom.dare2compete.app/1/0109019025a1ccf0-94b862e3-39bd-40ca-a0ef-f7d927=
+2377a3-000000/T9AizjT36ZTJQ7VNvA01rrYsK2W2FHB2MI_9mx6uTcc=3D159" style=3D"b=
+ox-sizing: border-box; font-family: 'Roboto', sans-serif; color: #3869D4; d=
+isplay: block; text-decoration: none; margin-bottom: 5px;" target=3D"_blank=
+">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img src=3D"https://d8it=
+4huxumps7.cloudfront.net/uploads/images/65dc4425c10b7_google_play.png" alt=
+=3D"Play Store Icon" style=3D"font-family: Avenir, Helvetica, sans-serif; b=
+ox-sizing: border-box; border: 0 !important; outline: none !important; max-=
+width: 100%; display: block; width: 120px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"https://mstats.d=
+are2compete.com/CL0/https:%2F%2Fapps.apple.com%2Fin%2Fapp%2Funstop-formerly=
+-dare2compete%2Fid1601170365/1/0109019025a1ccf0-94b862e3-39bd-40ca-a0ef-f7d=
+9272377a3-000000/Crqi_JAiEHed7DEljiTRkDHKyRS8qgL6U6IJ2VWcwDk=3D159" style=
+=3D"box-sizing: border-box; font-family: 'Roboto', sans-serif; color: #3869=
+D4; display: block; text-decoration: none;" target=3D"_blank">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img src=3D"https://d8it=
+4huxumps7.cloudfront.net/uploads/images/65dc442fcf07e_app_store.png" alt=3D=
+"App Store Icon" style=3D"font-family: Avenir, Helvetica, sans-serif; box-s=
+izing: border-box; border: 0 !important; outline: none !important; max-widt=
+h: 100%; display: block; width: 120px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09</tr>
+
+=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09<td class=3D"queries" style=3D"box-sizing: border-box;=
+ font-family: 'Roboto', sans-serif; text-align: center; padding: 0 15px 20p=
+x;">
+=09=09=09=09=09=09=09=09<p style=3D"box-sizing: border-box; line-height: 1.=
+5em; margin-top: 0; font-family: 'Inter', sans-serif; text-align: center; c=
+olor: #383838; font-size: 14px; font-weight: 500; margin: 0;">
+=09=09=09=09=09=09=09=09=09Queries? We're just one email away: <a href=3D"m=
+ailto:support@unstop.com" class=3D"h_text_color" style=3D"box-sizing: borde=
+r-box; font-family: 'Inter', sans-serif; color: #383838; text-decoration: n=
+one;">support@unstop.com</a>
+=09=09=09=09=09=09=09=09</p>
+
+=09=09=09=09=09=09=09=09<div style=3D"box-sizing: border-box; font-family: =
+'Roboto', sans-serif; text-align: center;">
+=09=09=09=09=09=09=09=09=09<a href=3D"https://mstats.dare2compete.com/CL0/h=
+ttps:%2F%2Fwww.instagram.com%2Funstop.world%2F/2/0109019025a1ccf0-94b862e3-=
+39bd-40ca-a0ef-f7d9272377a3-000000/Lt3I-OkFAKeFYV6xfJtUNdvufbgFacuJ1wsIcxY4=
+amg=3D159" style=3D"box-sizing: border-box; font-family: 'Roboto', sans-ser=
+if; color: #3869D4; display: inline-block; text-decoration: none; margin-ri=
+ght: 10px; width: 40px; height: 40px; background: #FAFAFA; border-radius: 5=
+0px;" target=3D"_blank">
+=09=09=09=09=09=09=09=09=09=09<img src=3D"https://d8it4huxumps7.cloudfront.=
+net/uploads/images/66433aee6e146_instagram.png" alt=3D"Instagram Icon" styl=
+e=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; bo=
+rder: 0 !important; outline: none !important; max-width: 100%; display: blo=
+ck; width: 40px;">
+=09=09=09=09=09=09=09=09=09</a>
+
+=09=09=09=09=09=09=09=09=09<a href=3D"https://mstats.dare2compete.com/CL0/h=
+ttps:%2F%2Fwww.linkedin.com%2Fcompany%2Funstop%2F/2/0109019025a1ccf0-94b862=
+e3-39bd-40ca-a0ef-f7d9272377a3-000000/p7WEmsdItBApZTtvQcR6APvKLTpJ1cnILucFN=
+kEWeZA=3D159" style=3D"box-sizing: border-box; font-family: 'Roboto', sans-=
+serif; color: #3869D4; display: inline-block; text-decoration: none; margin=
+-right: 10px; width: 40px; height: 40px; background: #FAFAFA; border-radius=
+: 50px;" target=3D"_blank">
+=09=09=09=09=09=09=09=09=09=09<img src=3D"https://d8it4huxumps7.cloudfront.=
+net/uploads/images/66433aff63c9b_linkedin.png" alt=3D"Linkedin Icon" style=
+=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; bor=
+der: 0 !important; outline: none !important; max-width: 100%; display: bloc=
+k; width: 40px;">
+=09=09=09=09=09=09=09=09=09</a>
+
+=09=09=09=09=09=09=09=09=09<a href=3D"https://mstats.dare2compete.com/CL0/h=
+ttps:%2F%2Ft.me%2F%2BON15qceSy-IyZjY9/2/0109019025a1ccf0-94b862e3-39bd-40ca=
+-a0ef-f7d9272377a3-000000/8ctpYlzkrgV_P98OzTjvKUZrX7k1A1NvnlRGBIul2HA=3D159=
+" style=3D"box-sizing: border-box; font-family: 'Roboto', sans-serif; color=
+: #3869D4; display: inline-block; text-decoration: none; margin-right: 10px=
+; width: 40px; height: 40px; background: #FAFAFA; border-radius: 50px;" tar=
+get=3D"_blank">
+=09=09=09=09=09=09=09=09=09=09<img src=3D"https://d8it4huxumps7.cloudfront.=
+net/uploads/images/66433b096c58b_telegram.png" alt=3D"Telegram Icon" style=
+=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; bor=
+der: 0 !important; outline: none !important; max-width: 100%; display: bloc=
+k; width: 40px;">
+=09=09=09=09=09=09=09=09=09</a>
+
+=09=09=09=09=09=09=09=09=09<a href=3D"https://mstats.dare2compete.com/CL0/h=
+ttps:%2F%2Fwww.youtube.com%2Fc%2FUnstop_World/2/0109019025a1ccf0-94b862e3-3=
+9bd-40ca-a0ef-f7d9272377a3-000000/BO1qOuX436GzWLw1vuqT7GPIlKmHLKzbYzLN3u3K3=
+Vc=3D159" style=3D"box-sizing: border-box; font-family: 'Roboto', sans-seri=
+f; color: #3869D4; display: inline-block; text-decoration: none; width: 40p=
+x; height: 40px; background: #FAFAFA; border-radius: 50px;" target=3D"_blan=
+k">
+=09=09=09=09=09=09=09=09=09=09<img src=3D"https://d8it4huxumps7.cloudfront.=
+net/uploads/images/66433b12a37a3_youtube.png" alt=3D"Youtube Icon" style=3D=
+"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; border=
+: 0 !important; outline: none !important; max-width: 100%; display: block; =
+width: 40px;">
+=09=09=09=09=09=09=09=09=09</a>
+=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09</tr>
+
+=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09<td style=3D"box-sizing: border-box; font-family: 'Rob=
+oto', sans-serif; padding-top: 20px; text-align: center;">
+=09=09=09=09=09=09=09=09<p style=3D"box-sizing: border-box; line-height: 1.=
+5em; margin-top: 0; font-family: 'Inter', sans-serif; color: #1c1c1c; font-=
+size: 12px; font-weight: 500; margin: 0 0 10px; text-align: center;">
+=09=09=09=09=09=09=09=09=09Get the Unstop app
+=09=09=09=09=09=09=09=09</p>
+=09=09=09=09=09=09=09=09<div style=3D"box-sizing: border-box; font-family: =
+'Roboto', sans-serif;">
+=09=09=09=09=09=09=09=09=09<a href=3D"https://mstats.dare2compete.com/CL0/h=
+ttps:%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid=3Dcom.dare2compete=
+.app/2/0109019025a1ccf0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-000000/Fd3tMZ8=
+o5llqfTxzHdA53eKsuMAf26hSccLMTiuxGoo=3D159" style=3D"box-sizing: border-box=
+; font-family: 'Roboto', sans-serif; color: #3869D4; display: inline-block;=
+ text-decoration: none; margin-right: 10px;" target=3D"_blank">
+=09=09=09=09=09=09=09=09=09=09<img src=3D"https://d8it4huxumps7.cloudfront.=
+net/uploads/images/6641f370d8dc5_google_play.png" alt=3D"Play Store Icon" s=
+tyle=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;=
+ outline: none !important; max-width: 100%; display: block; width: 120px; b=
+order: 1px solid #1c1c1c !important; border-radius: 50px; background: #1c1c=
+1c;">
+=09=09=09=09=09=09=09=09=09</a>
+
+=09=09=09=09=09=09=09=09=09<a href=3D"https://mstats.dare2compete.com/CL0/h=
+ttps:%2F%2Fapps.apple.com%2Fin%2Fapp%2Funstop-formerly-dare2compete%2Fid160=
+1170365/2/0109019025a1ccf0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-000000/_520=
+DDeW3v0WAwVii_ieopcXOwXLLJ5GgrWL9N5956g=3D159" style=3D"box-sizing: border-=
+box; font-family: 'Roboto', sans-serif; color: #3869D4; display: inline-blo=
+ck; text-decoration: none;" target=3D"_blank">
+=09=09=09=09=09=09=09=09=09=09<img src=3D"https://d8it4huxumps7.cloudfront.=
+net/uploads/images/6641f38f1c761_app_store.png" alt=3D"App Store Icon" styl=
+e=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; ou=
+tline: none !important; max-width: 100%; display: block; width: 120px; bord=
+er: 1px solid #1c1c1c !important; border-radius: 50px; background: #1c1c1c;=
+">
+=09=09=09=09=09=09=09=09=09</a>
+=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09
+=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09<td style=3D"box-sizing: border-box; font-family: 'Rob=
+oto', sans-serif; padding-top: 20px; text-align: center;">
+=09=09=09=09=09=09=09=09<span style=3D"box-sizing: border-box; font-family:=
+ 'Inter', sans-serif; text-align: center; color: #1c1c1c; font-size: 12px; =
+font-weight: 500; border-right: 1px solid #D9D9D9; padding-right: 12px; mar=
+gin-right: 12px;">
+=09=09=09=09=09=09=09=09=09Queries? We're just one email away: <a href=3D"m=
+ailto:support@unstop.com" class=3D"h_text_color" style=3D"box-sizing: borde=
+r-box; font-family: 'Inter', sans-serif; color: #1c1c1c; text-decoration: n=
+one;">support@unstop.com</a>
+=09=09=09=09=09=09=09=09</span>
+
+=09=09=09=09=09=09=09=09<span style=3D"box-sizing: border-box; font-family:=
+ 'Inter', sans-serif; text-align: center; color: #1c1c1c; font-size: 12px; =
+font-weight: 500;">
+=09=09=09=09=09=09=09=09=09=C2=A9 2024 <a class=3D"h_text_color" href=3D"ht=
+tps://mstats.dare2compete.com/CL0/https:%2F%2Funstop.com%2F/1/0109019025a1c=
+cf0-94b862e3-39bd-40ca-a0ef-f7d9272377a3-000000/o_-ZGTxjHZvnFzvyrUHb8OIVliT=
+UAJxPxuaJLbJf0SU=3D159" style=3D"box-sizing: border-box; font-family: 'Inte=
+r', sans-serif; color: #1c1c1c; text-decoration: none;">Unstop</a>.
+=09=09=09=09=09=09=09=09=09All rights reserved
+=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09</span>
+</td>
+=09=09=09=09=09=09</tr>
+=09=09=09=09=09</tbody>
+=09=09=09=09</table>
+=09=09=09</td>
+=09=09</tr>
+=09</tbody>
+</table>;
+                </td>
+            </tr>
+        </table>
+    </div>
+<img alt=3D"" src=3D"http://mstats.dare2compete.com/CI0/0109019025a1ccf0-94=
+b862e3-39bd-40ca-a0ef-f7d9272377a3-000000/wkYOIaHNwI3K4eHrWxuO2Og6FXdEmlRwX=
+qWPyPzb8zc=3D159" style=3D"display: none; width: 1px; height: 1px;">
+</body>
+
+</html>
+
+--_=_swift_1718618279_788a1501a6d9136554f052ccf199a028_=_--

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis Report</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        h2 {
+            color: #4CAF50;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section pre {
+            background-color: #f4f4f9;
+            padding: 10px;
+            border-left: 5px solid #4CAF50;
+            overflow-x: auto;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        a:hover {
+            background-color: #45a049;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+</head>
+<body>
+    <h1>Email Analysis Report</h1>
+    <div class="container" id="report"></div>
+    <div id="map" class="container"></div>
+    <div class="container">
+        <a href="{{ url_for('index') }}">Upload another file</a>
+        <a href="/uploads/email_analysis_report.pdf" download>Download PDF Report</a>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const analysis = {{ analysis | tojson }};
+            const reportDiv = document.getElementById('report');
+
+            function createTable(data) {
+                const table = document.createElement('table');
+                const thead = document.createElement('thead');
+                const tbody = document.createElement('tbody');
+
+                const headers = Object.keys(data[0]);
+                const headerRow = document.createElement('tr');
+                headers.forEach(header => {
+                    const th = document.createElement('th');
+                    th.textContent = header;
+                    headerRow.appendChild(th);
+                });
+                thead.appendChild(headerRow);
+
+                data.forEach(item => {
+                    const row = document.createElement('tr');
+                    headers.forEach(header => {
+                        const td = document.createElement('td');
+                        td.textContent = item[header];
+                        row.appendChild(td);
+                    });
+                    tbody.appendChild(row);
+                });
+
+                table.appendChild(thead);
+                table.appendChild(tbody);
+                return table;
+            }
+
+            function createSection(title, content) {
+                const section = document.createElement('div');
+                section.className = 'section';
+                const h2 = document.createElement('h2');
+                h2.textContent = title;
+                section.appendChild(h2);
+
+                if (Array.isArray(content)) {
+                    if (content.length > 0 && typeof content[0] === 'object') {
+                        section.appendChild(createTable(content));
+                    } else {
+                        const ul = document.createElement('ul');
+                        content.forEach(item => {
+                            const li = document.createElement('li');
+                            li.textContent = item;
+                            ul.appendChild(li);
+                        });
+                        section.appendChild(ul);
+                    }
+                } else if (typeof content === 'object') {
+                    const pre = document.createElement('pre');
+                    pre.textContent = JSON.stringify(content, null, 4);
+                    section.appendChild(pre);
+                } else {
+                    const p = document.createElement('p');
+                    p.textContent = content;
+                    section.appendChild(p);
+                }
+
+                reportDiv.appendChild(section);
+            }
+
+            createSection('From', analysis.From);
+            createSection('To', analysis.To);
+            createSection('Subject', analysis.Subject);
+            createSection('Date', analysis.Date);
+            createSection('Parsed Date', analysis.Date_Parsed);
+            createSection('Received Headers', analysis.Received);
+            createSection('IP Addresses', analysis.IP_Addresses);
+            createSection('IP Info', analysis.IP_Info);
+            createSection('SPF', analysis.SPF);
+            // createSection('Content', analysis.Content);
+
+            // Create a map and add IP geolocation markers
+            const map = L.map('map').setView([20, 0], 2);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            analysis.IP_Info.forEach(ipInfo => {
+                if (ipInfo.loc) {
+                    const [lat, lon] = ipInfo.loc.split(',');
+                    L.marker([lat, lon]).addTo(map)
+                        .bindPopup(`<b>${ipInfo.ip}</b><br>${ipInfo.city}, ${ipInfo.region}, ${ipInfo.country}`)
+                        .openPopup();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
